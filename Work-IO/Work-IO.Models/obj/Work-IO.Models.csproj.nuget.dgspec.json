@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nidia\\source\\repos\\Work-IO\\Work-IO.Models\\Work-IO.Models.csproj": {}
+    "C:\\git-proyecto\\3A.NMAC.Proyecto\\Work-IO\\Work-IO.Models\\Work-IO.Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nidia\\source\\repos\\Work-IO\\Work-IO.Models\\Work-IO.Models.csproj": {
+    "C:\\git-proyecto\\3A.NMAC.Proyecto\\Work-IO\\Work-IO.Models\\Work-IO.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nidia\\source\\repos\\Work-IO\\Work-IO.Models\\Work-IO.Models.csproj",
+        "projectUniqueName": "C:\\git-proyecto\\3A.NMAC.Proyecto\\Work-IO\\Work-IO.Models\\Work-IO.Models.csproj",
         "projectName": "Work-IO.Models",
-        "projectPath": "C:\\Users\\nidia\\source\\repos\\Work-IO\\Work-IO.Models\\Work-IO.Models.csproj",
+        "projectPath": "C:\\git-proyecto\\3A.NMAC.Proyecto\\Work-IO\\Work-IO.Models\\Work-IO.Models.csproj",
         "packagesPath": "C:\\Users\\nidia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nidia\\source\\repos\\Work-IO\\Work-IO.Models\\obj\\",
+        "outputPath": "C:\\git-proyecto\\3A.NMAC.Proyecto\\Work-IO\\Work-IO.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

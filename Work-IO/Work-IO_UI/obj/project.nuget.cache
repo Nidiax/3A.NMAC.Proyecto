@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ihE/MP/2t3mZFOiTtpBNS3iveK+EM9oYmS+b6En5epkPtlJL+ArQxj5F7/3VEMiMzMreakVJZ6ExuOo5J8u/5g==",
+  "dgSpecHash": "ZRWo39g/KN2gm60ShGy22CEK2I/luUQQaWnc5au5Ap4YV7lVjMXlS1OjU1txX7JXJs9lTtYrOlW9ArmJsIAiDQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nidia\\source\\repos\\Work-IO\\Work-IO_UI\\Work-IO.csproj",
+  "projectFilePath": "C:\\git-proyecto\\3A.NMAC.Proyecto\\Work-IO\\Work-IO_UI\\Work-IO.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nidia\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\nidia\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
