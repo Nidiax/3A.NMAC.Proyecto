@@ -1,0 +1,68 @@
+﻿@page
+@model Work_IO_UI.Pages.RegistroModel
+@{
+    ViewData["Title"] = "Registro";
+}
+
+<h1 class="text-center">Registro</h1>
+
+<body>
+    <div class="registro">
+        <form>
+            <br />
+            <label for="Nombre de la Empresa">Nombre de la Empresa</label>
+            <input type="text" size="80" />
+            <br />
+            <label for="Dirección">Dirección</label>
+            <input type="text" placeholder="C.P" size="20" maxlength="5" />
+            <input type="text" placeholder="Calle, Número exterior y/o número interior" size="40" />
+            <input type="text" placeholder="Colonia" size="30" /><br />
+            <input type="text" placeholder="Entre que calle se encuentra" size="40" /><br />
+            <label for="Estado">Estado</label>
+             <input type="text" size="30"/><br />
+            <label for="Número telefónico">Número telefónico</label>
+            <input type="text" size="20" />
+            <label for="Correo electrónico">Correo Electrónico</label>
+            <input type="text" size="40"/><br />
+            <button type="button" class="btn btn-primary">Siguiente</button>
+
+        </form>
+    </div>
+</body>
+
+<style>
+    .registro label {
+        margin:0;
+        padding:0;
+        display: block;
+        font-weight:bold;
+    }
+
+    body {
+        font-family: sans-serif;
+        margin:0;
+        padding:0;
+    }
+
+    .registro .btn-primary {
+        position:sticky;
+        top: 60px;
+        left:auto;
+    
+    }
+
+    .registro input {
+        width: 50%;
+        margin-bottom:10px;
+    }
+
+    .registro input[type="text"] {
+        border:groove;
+        background: transparent;
+        height:40px;
+        color:black;
+        font-size:12px;
+        font:menu;
+
+    }
+</style>
