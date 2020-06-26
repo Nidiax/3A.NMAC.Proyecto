@@ -224,3 +224,4 @@ C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Work
 C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Work-IO.pdb
 C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Work-IO.genruntimeconfig.cache
 C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\RegistroEmpresa.cshtml.g.cs
+C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Referencias.cshtml.g.cs

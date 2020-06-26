@@ -1,0 +1,40 @@
+                          --12/06/20-- 
+*Trabajar en el diseño del login y agregar funcionalidad de navegación
+* Agregar una vista para las ordenes de revisión de referencias
+* Agregar estilo a pantallas de inicio, registro de empresa y registor de candidato
+* Enlace a base de datos en la pantalla de registro de candidato
+
+
+
+login
+<div class="checkbox">
+    <label><input type="checkbox" name="remember" />Recuérdame</label>
+</div>
+
+<div class="boton">
+    <button type="button" class="btn btn-default">Inicar Sesion</button>
+</div>
+
+
+referencias
+<body>
+    <form>
+        <div class="form-group">
+            <label for="nombrecomercial">Nombre Comercial</label>
+            <input type="text" id="nombrecomercial" name="nombrecomercial" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="telefono">Telefono</label>
+            <input type="text" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="direccion">Direccion</label>
+            <input type="text" class="form-control" id="nombrecomercial" name="nombrecomercial" placeholder="Calle,Número exterior y/o número interior   Colonia  Entre que calles se encuentra  " />
+        </div>
+        <div class="form-group">
+
+        </div>
+
+
+    </form>
+</body>

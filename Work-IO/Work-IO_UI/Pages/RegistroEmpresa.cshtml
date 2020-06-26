@@ -7,24 +7,36 @@
 <h1 class="text-center">Registro de la Empresa</h1>
 
 <body>
-    <div class="registro">
+    <div class="registro"> <!--página vista por el administrador-->
         <form>
-            <br />
-            <label for="Nombre de la Empresa">Nombre de la Empresa</label>
-            <input type="text" size="80" />
-            <br />
-            <label for="Dirección">Dirección</label>
-            <input type="text" placeholder="C.P" size="20" maxlength="5" />
-            <input type="text" placeholder="Calle, Número exterior y/o número interior" size="40" />
-            <input type="text" placeholder="Colonia" size="30" /><br />
-            <input type="text" placeholder="Entre que calle se encuentra" size="40" /><br />
-            <label for="Estado">Estado</label>
-             <input type="text" size="30"/><br />
-            <label for="Número telefónico">Número telefónico</label>
-            <input type="text" size="20" />
-            <label for="Correo electrónico">Correo Electrónico</label>
-            <input type="text" size="40"/><br />
-            <button type="button" class="btn btn-primary">Siguiente</button>
+            <div class="form-group">
+                <label for="Nombre de la Empresa">Nombre de la Empresa</label>
+                <input type="text" size="80" placeholder=" Coca-Cola FEMSA SA de CV " />
+            </div>
+
+            <div class="form-group">
+                <label for="Dirección">Dirección</label>
+                <input type="text" placeholder="   C.P       Calle       Número exterior y/o número interior       Colonia       Entre que calle se encuentra " size="100" /><br />
+            </div>
+
+            <div class="form-group">
+                <label for="Número telefónico">Número telefónico</label>
+                <input type="text" size="20" placeholder=" (999) 3742043 " />
+            </div>
+
+            <div class="form-group">
+                <label for="Correo electrónico">Correo Electrónico</label>
+                <input type="email" size="40" placeholder=" consumidor@coca-cola.com" /><br />
+            </div>
+
+            <div class="form-group">
+                <label for="contraseña">Contraseña</label>
+                <input type="password" placeholder="Contraseña" />
+            </div>
+
+            <div>
+                <input type="submit" value="Registrar" />
+            </div>
 
         </form>
     </div>
@@ -35,34 +47,57 @@
         margin:0px;
         padding:0px;
         display: block;
-        font-weight:normal;
+        font-weight:bold;
+        color:white;
+
+    }
+
+    .registro input[type="email"], .registro input[type="password"] {
+
+         border-style: solid; /*le da borde al input*/
+         border-width: medium; /*le deja el borde completamente negro y delgado*/
+         background: white; /*color de fondo del input*/
+         color: black; /*color de las letras*/
+         font-size: 16px; /*tamaño de las letras*/
+         height: 40px; /*tamaño del cuadrado, o sea en lo largo*/
+         box-sizing: border-box;
     }
 
     body {
-        font-family: sans-serif;
-        margin:0;
-        padding:0;
+         font-family: initial; /*tipo de letra para toda la página*/
+         margin: 0; /*margenes*/
+         padding: 0;
+         background-color: cadetblue; /*sirve para poner en el fondo de la página un color*/
+         border-radius: 5px;
     }
 
-    .registro .btn-primary {
-        position:sticky;
-        top: 60px;
-        left:auto;
-    
+    .registro input[type=submit] {
+        position: page;
+        top: 40%; /*donde quedará centrado*/
+        left: auto;
+        background: white; /*color de fondo del input*/
+        color: black; /*color de las letras*/
+        font-size: 18px;
+        cursor: pointer; /*sirve para indicar que función hará el botón*/
     }
 
     .registro input {
-        width: 50%;
-        margin-bottom:10px;
+        margin-bottom:20px; /*espacio que hay entre los input*/
     }
 
-    .registro input[type="text"] {
-        box-sizing:border-box;
-        background: transparent;
-        height:40px;
-        color:black;
-        font-size:12px;
-        font:menu;
 
-    }
+     .registro input[type="text"] {
+           
+         border-style: solid; /*le da borde al input*/
+         border-width: medium; /*le deja el borde completamente negro y delgado*/
+         background: white; /*color de fondo del input*/
+         color: black; /*color de las letras*/
+         font-size: 16px; /*tamaño de las letras*/
+         height: 40px; /*tamaño del cuadrado, o sea en lo largo*/
+         box-sizing:border-box; 
+     }
+
+
+    
+  
 </style>

@@ -4,89 +4,113 @@
     ViewData["Title"] = "Login";
 }
 
-<h1 class="text-center">Iniciar Sesión</h1>
 
 <div class="login-box">
 
     <form>
+        <div>
+            <h1 class="text-center">Iniciar Sesión</h1>
+        </div>
+      
+        <div>
+            <!--Usuario-->
+            <label for="Usuario">Usuario</label>
+           <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>-->
+            <input type="email" placeholder="Correo Electrónico o Usuario" />
+        </div>
+       
+        <div>
+            <!--Contraseña-->
+            <label for="contraseña">Contraseña</label>
+            <input type="password" placeholder="Contraseña" />
+        </div>
+       
 
-        <!--Usuario-->
-        <label for="Usuario">Usuario</label>
-        <input type="text" placeholder="Correo Electrónico o Usuario" />
-        <!--Contraseña-->
-        <label for="contraseña">Contraseña</label>
-        <input type="password"placeholder="Contraseña" />
-        <input type="submit" value="Iniciar Sesión" />
+       <!-- <div class="checkbox">
+            <label for="remember me">Recuérdame</label>
+            <input id="remember me" type="checkbox">
+        </div> -->
 
-        <a href="#">¿Olvidaste tú contraseña?</a>
-        <br />
-        <a href="#">Registrarme</a> 
+        <div>
+            <input type="submit" value="Iniciar Sesión" />
+        </div>
+        
+
+
     </form>
 </div>
 
 <style>
 
-    body {
-        margin:0;
-        padding:0;
-        font-family: sans-serif;
+    body {      /*cuerpo*/
+        margin:0;           /*margenes*/
+        padding:0;          /*es el espacio que hay entre label y input*/
+        font-family: initial;  /*tipo de letra para toda la página*/
+        background-color:cadetblue;  /* color de fondo de la pagina*/
     }
 
-    .login-box label {
+    .login-box label {  /*forma de label*/
         margin: 0;
-        padding:0 0 20px;
-        font-weight: bold;
-        display: block;
+        padding:0 0 20px; /*tenga un espacio hacía abajo*/
+        font-weight: bold;  /*para que las letras estén remancadas*/
+       /* display: block;*/  /*para que esté en una sola línea*/
     }
 
-    .login-box input {
-        width: 100%;
-        margin-bottom: 20px;
+    .login-box input {  /* los input para cada label*/
+        width: 100%; /*acabarcan*/
+        margin-bottom: 20px; /*margen del boton*/
     }
 
-    .login-box input[type="text"], .login-box input[type="password"] {
-        border: none;
-        border-bottom: 1px solid;
-        background: transparent;
-        outline: none;
-        height: 40px;
-        font-size: 16px; 
+    .login-box input[type="email"], .login-box input[type="password"] {  /**/
+        border: none; /*quitar borde*/
+        border-bottom: 1px solid; /*línea que queda hacía abajo*/
+        background: transparent; /*el fondo transparente*/
+        outline: none; /**/
+        height: 40px;    /*alto*/
+        font-size: 16px; /*tamañan de la letra*/
     } 
 
-    .login-box input[type="submit"] {
-        cursor: pointer;
-        background: white;
-        color: black;
-        outline:none;
-        border:none;
-        font-size:18px;
+    .login-box input[type="submit"] { /*el botón*/
+        cursor: pointer; /*sirve para indicar que función hará el botón*/
+        background: gray; /*color de fondo*/
+        color: black; /*color de la letra*/
+        outline:none;  /**/
+        border:none; /*no tendrá ningún borde*/
+        font-size:18px; /*tamaño de letra*/
     }
 
-    .login-box a {
-        text-decoration: none;
-        font-size: 12px;
-        line-height: 20px;
-        color:black;
+    .login-box a {   /*enlaces*/
+        text-decoration: none;  /*quitar la decoración por defecto*/
+        font-size: 12px; /*tamaño de las letra*/
+        line-height: 20px; /*línea divisiora*/
+        color:black; /*color de las letras*/
     }
 
-    .login-box a:hover {
-        color: black;
+    .login-box a:hover {  /*tenga un efecto de color */
+        color: black; /*color de letra*/
     }
 
-    .login-box {
-        width: 520px;
-        height:500px;
-        background: #0094ff;
-        color: white;
-        top: 50%;
-        left: 50%;
-        position: absolute;
-        transform: translate(-50%, -50%);
-        box-sizing: border-box;
-        padding: 70px 30px;
+    .login-box {   /*formulario*/
+        width: 520px;  /*creación de una cuadro también ancho del cuadro*/
+        height:500px;  /*tamaño del cuadro de largo*/
+        background: white; /*fondo del cuadro*/
+        color: black;  /*color de las letras del cuadro*/
+        top: 50%; /*centrado*/
+        left: 50%; /*centrado*/
+        position: absolute;  /* posición*/
+        transform: translate(-50%, -50%); /*posición centrada*/
+        box-sizing: border-box; /**/
+        padding: 40px/*hacía arriba*/ 40px;/*hacía los lados*/   /*espacio interno*/
     }
 
+    .checkbox input[type="checkbox"] {
+        top:-20%;
 
+    }
+
+    .checkbox label[remember me] {
+        top:-20px;
+    }
 </style>
 
 

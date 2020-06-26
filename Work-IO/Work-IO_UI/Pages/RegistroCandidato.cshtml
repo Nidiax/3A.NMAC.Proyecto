@@ -4,66 +4,126 @@
     ViewData["Title"] = "RegistroCandidato";
 }
 
-<h1 class="text-center">Registro delCandidato</h1>
-
-<body>
-    <div class="candidato">
-        <form>
-            <label for="nombre del candidato">Nombre del Candidato</label><br />
-            <br />
-            <input type="text" placeholder="Nombre" size="60" /><br />
-            <br />
-            <input type="text" placeholder="Apellido Paterno" size="60" /><br />
-            <br />
-            <input type="text" placeholder="Apellido Materno" size="60" /><br /><br />
-          <!---
-             <label for="sexo">Sexo</label>
-            <input type="radio" name="sexo" value="hombre" checked="checked" />Hombre
-            <input type="radio" name="sexo" value="mujer" checked="checked" />Mujer-->
-            <br />
-            <label for="añadir un archivo">Añadir un Archivo</label><br />
-            <input type="file" name="adjunto" />
 
 
+<body class="candidato" >
+    
+        
+            <h1 class="text-center">Registro del Candidato</h1>
 
+            <div class="form-group">
+                <label for="nombre del candidato">Nombre del Candidato</label><br />
+                <input type="text" placeholder="  Nombre                  Apellido Paterno      Apellido Materno " size="50"/><br />
+                <br />
+            </div>
 
-        </form>
-    </div>
+            <div>
+                <form>
+                    <label for="genero">Género</label><br />
+                    <input type="radio" id="masculino" name="genero" value="masculino" />
+                    <label for="masculino">Masculino</label><br />
+                    <input type="radio" id="femenino" name="genero" value="femenino" />
+                    <label for="femenino">Femenino</label><br />
+                    <input type="radio" id="otro" name="genero" value="otro" />
+                    <label for="otro">Otro</label>
+                </form>
+            </div>
+            
+            <div class="form-group">
+                 <label for="fecha de nacimiento">Fecha de Nacimiento</label><br />
+                <input type="date" size="40" />
+            </div>
+
+            <div class="form-group">
+                <label for="lugar de nacimiento">Lugar de Nacimiento</label><br />
+                <input type="text" size="40" />
+            </div>
+       
+            <div class="form-group">
+                <label for="edad">Edad</label><br />
+                <input type="text" size="30" />
+            </div>
+            
+            <div class="form-group">
+                <label for="estado civil">Seleccione una opción</label><br />
+                <select id="estado civil">
+                    
+                    <option value="Estado Civil"></option>
+                    <option value="soltero">Soltero</option>
+                    <option value="casado">Casado</option>
+                    <option value="divorciado">Divorciado</option>
+                    <option value="viudo">Viudo</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="curp">CURP</label><br />
+                <input type="text" size="30" />
+            </div>
+
+            <div class="form-group">
+                <label for="imss">NSS</label><br />
+                <input type="text" size="30" />
+            </div>
+
+             <div>
+                 <label for="rfc">RFC</label><br />
+                 <input type="text" size="30"/>
+             </div>
+             
+
 </body>
 
 <style>
 
     body {
-        font-family: sans-serif;
+        font-family: initial;
         margin: 0;
         padding: 0;
         border-radius: 5px;
-       
+        background-color: cadetblue;
     }
 
     .candidato label {
         margin: 0px;
         padding: 0px;
-        display: block;
-        font-weight:normal;
+        font-weight:bold;
+        color:white;
     }
 
     .candidato input {
-        width: 50%;
         margin-bottom: 10px;
     }
 
-   .candidato input[type="text"] {
+    .candidato input[type="text"] {
+         
         box-sizing: border-box;
-        background: transparent;
-        height: 40px;
+        background: white;
+        height: 30px;
         color: black;
-        font-size: 12px;
-        font: menu;
-   }
+        font-size: 16px;
+        border-style: solid;
+        border-width: medium;
+        box-sizing:border-box;
+    }
 
+     .candidato input [type="radio"] {
+           
+        margin-bottom: 10px;
+        margin: 0px;
+        padding: 0px;
+        color: black; 
+     }
 
-
+    .candidato select {
+        height: 30px;
+        border-style: solid; /*le da borde al input*/
+        border-width: medium; /*le deja el borde completamente negro y delgado*/
+        background: white; /*color de fondo del input*/
+        color: black; /*color de las letras*/
+        font-size: 16px; /*tamaño de las letras*/
+    }
+    
 
 
 
