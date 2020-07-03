@@ -1,0 +1,12 @@
+C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO.Models\bin\Debug\netcoreapp3.1\Work-IO.Models.deps.json
+C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO.Models\bin\Debug\netcoreapp3.1\Work-IO.Models.dll
+C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO.Models\obj\Debug\netcoreapp3.1\Work-IO.Models.csprojAssemblyReference.cache
+C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO.Models\obj\Debug\netcoreapp3.1\Work-IO.Models.AssemblyInfoInputs.cache
+C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO.Models\obj\Debug\netcoreapp3.1\Work-IO.Models.AssemblyInfo.cs
+C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO.Models\bin\Debug\netcoreapp3.1\Work-IO.Models.runtimeconfig.json
+C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO.Models\bin\Debug\netcoreapp3.1\Work-IO.Models.runtimeconfig.dev.json
+C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO.Models\obj\Debug\netcoreapp3.1\Work-IO.Models.genruntimeconfig.cache
+C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO.Models\bin\Debug\netcoreapp3.1\Work-IO.Models.pdb
+C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO.Models\obj\Debug\netcoreapp3.1\Work-IO.Models.csproj.CoreCompileInputs.cache
+C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO.Models\obj\Debug\netcoreapp3.1\Work-IO.Models.dll
+C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO.Models\obj\Debug\netcoreapp3.1\Work-IO.Models.pdb
