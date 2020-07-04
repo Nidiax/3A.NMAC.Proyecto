@@ -10,7 +10,9 @@ namespace Work_IO.Models
     {
        // [Key]
        // public int CuentaId { get; set; }
+       [Display(Name ="Usuario")]
        public string Usuario { get; set; }
+        [Display(Name ="Contraseña")]
        public string Contraseña { get; set; }
 
     }
