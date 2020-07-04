@@ -196,6 +196,9 @@ namespace Work_IO.Services.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Numero")
+                        .HasColumnType("int");
+
                     b.Property<int>("OrdenId")
                         .HasColumnType("int");
 

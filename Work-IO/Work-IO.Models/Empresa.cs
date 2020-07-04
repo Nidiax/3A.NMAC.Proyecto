@@ -23,6 +23,8 @@ namespace Work_IO.Models
         [Display(Name ="Dirección")]
         [Required(ErrorMessage ="Este campo {0} debe ser obligatorio")]
         public string Direccion { get; set; }
+        [Display(Name ="Número teléfonico")]
+        public int Numero { get; set; }
 
         //Asociaciones
         //La empresa puede tener muchas ordenes

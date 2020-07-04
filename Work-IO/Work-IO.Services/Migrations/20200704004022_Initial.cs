@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Work_IO.Services.Migrations
 {
-    public partial class InitialMigration : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -55,6 +55,7 @@ namespace Work_IO.Services.Migrations
                     Correo = table.Column<string>(nullable: true),
                     Contraseña = table.Column<string>(nullable: true),
                     Direccion = table.Column<string>(nullable: false),
+                    Numero = table.Column<int>(nullable: false),
                     OrdenId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>

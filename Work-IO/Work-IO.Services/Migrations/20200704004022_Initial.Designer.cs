@@ -10,8 +10,8 @@ using Work_IO.Services;
 namespace Work_IO.Services.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20200703073123_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20200704004022_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -197,6 +197,9 @@ namespace Work_IO.Services.Migrations
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Numero")
+                        .HasColumnType("int");
 
                     b.Property<int>("OrdenId")
                         .HasColumnType("int");

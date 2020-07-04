@@ -266,3 +266,4 @@ C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\bin\Debug\netcoreapp3.1\Work
 C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\bin\Debug\netcoreapp3.1\Work-IO.Services.pdb
 C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\bin\Debug\netcoreapp3.1\Work-IO.Models.pdb
+C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\EmpresasRegistradas.cshtml.g.cs
