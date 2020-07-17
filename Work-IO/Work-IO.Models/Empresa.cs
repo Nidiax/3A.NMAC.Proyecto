@@ -19,7 +19,6 @@ namespace Work_IO.Models
         [Display(Name ="Correo electrónico")]
         [EmailAddress(ErrorMessage ="Este campo {0} debe ser un correo electrónico válido")]
         public string Correo { get; set; }
-        public string Contraseña { get; set; }
         [Display(Name ="Dirección")]
         [Required(ErrorMessage ="Este campo {0} debe ser obligatorio")]
         public string Direccion { get; set; }

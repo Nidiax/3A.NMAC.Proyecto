@@ -1,0 +1,49 @@
+﻿@page
+@model Work_IO_UI.Pages.CandidatosRegistradosModel
+@{
+    ViewData["Title"] = "CandidatosRegistrados";
+}
+
+<h1>Candidatos Registrados</h1>
+@if (Model.Candidatos.Any())
+ {
+    <table class="table table-info table-striped">
+        <!--Head-->
+        <thead>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(x => x.Candidatos.FirstOrDefault().Id)</th>
+                <th scope="col">@Html.DisplayNameFor(x => x.Candidatos.FirstOrDefault().Nombre)</th>
+                <th scope="col">@Html.DisplayNameFor(x => x.Candidatos.FirstOrDefault().Genero)</th>
+                <th scope="col">@Html.DisplayNameFor(x => x.Candidatos.FirstOrDefault().Fecha_Nam)</th>
+                <th scope="col">@Html.DisplayNameFor(x => x.Candidatos.FirstOrDefault().Edad)</th>
+                <th scope="col">@Html.DisplayNameFor(x => x.Candidatos.FirstOrDefault().Estado_civil)</th>
+                <th scope="col">@Html.DisplayNameFor(x => x.Candidatos.FirstOrDefault().Curp)</th>
+                <th scope="col">@Html.DisplayNameFor(x => x.Candidatos.FirstOrDefault().NSS)</th>
+                <th scope="col">@Html.DisplayNameFor(x => x.Candidatos.FirstOrDefault().RFC)</th>
+
+               
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Candidatos)
+             {
+                <tr>
+                    <th scope="row">@Html.DisplayFor(m => item.Id)</th>
+                    <td>@Html.DisplayFor(m => item.Nombre)</td>
+                    <td>@Html.DisplayFor(m => item.Genero)</td>
+                    <td>@Html.DisplayFor(m => item.Fecha_Nam)</td>
+                    <td>@Html.DisplayFor(m => item.Edad)</td>
+                    <td>@Html.DisplayFor(m => item.Estado_civil)</td>
+                    <td>@Html.DisplayFor(m => item.Curp)</td>
+                    <td>@Html.DisplayFor(m => item.NSS)</td>
+                    <td>@Html.DisplayFor(m => item.RFC)</td>
+
+                </tr>
+             }
+
+            
+        </tbody>
+    </table>
+ }
+
+

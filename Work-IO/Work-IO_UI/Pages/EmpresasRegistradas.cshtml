@@ -4,10 +4,9 @@
     ViewData["Title"] = "EmpresasRegistradas";
 }
 
-<h1>EmpresasRegistradas</h1>
+<h1>Empresas Registradas</h1>
 @if (Model.Empresas.Any())
-{
-    <table class="table table-info table-striped">
+ { <table class="table table-info table-striped">
         <!--Head-->
             <thead>
                 <tr>
@@ -16,28 +15,36 @@
                     <th scope="col">@Html.DisplayNameFor(x => x.Empresas.FirstOrDefault().Direccion)</th>
                     <th scope="col">@Html.DisplayNameFor(x => x.Empresas.FirstOrDefault().Numero)</th>
                     <th scope="col">@Html.DisplayNameFor(x => x.Empresas.FirstOrDefault().Correo)</th>
-                    <th scope="col">@Html.DisplayNameFor(x => x.Empresas.FirstOrDefault().Contraseña)</th>
+                   
                     <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var item in Model.Empresas)
-                 {
+                {
                     <tr>
                         <th scope="row">@Html.DisplayFor(m => item.Id)</th>
                         <td>@Html.DisplayFor(m => item.Nombre)</td>
                         <td>@Html.DisplayFor(m => item.Direccion)</td>
                         <td>@Html.DisplayFor(m => item.Numero)</td>
                         <td>@Html.DisplayFor(m => item.Correo)</td>
-                        <td>@Html.DisplayFor(m => item.Contraseña)</td>
+                     
                     </tr>
-                 }
+                }
             </tbody>
-    </table>
+  </table>
+ }
+
+
+
+
+
+
     <div class="row">
-        <div class="col-xs-12 col-md-3"><a asp-page="/RegistrarCandidato" class="btn btn-primary btn-block btn-lg">Registrar</a></div>
+        <div class="col-xs-12 col-md-3"><a asp-page="/RegistrarCandidato" class="btn btn-primary btn-block btn-md">Registrar</a></div>
     </div>
 
-}
+  
+ }
 
 

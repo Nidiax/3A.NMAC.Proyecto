@@ -5,75 +5,87 @@
 }
 
 
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="Nombre del candidato">Nombre del Candidato</label>
+                            <input type="text" class="form-control" size="80" placeholder="Nombre" asp-for="Candidato.Nombre" />
+                            <span class="text-danger" asp-validation-for="Candidato.Nombre"></span>
+                        </div>
 
-<body class="candidato" >
-    
-        
-            <h1 class="text-center">Registro del Candidato</h1>
+                        <div class="form-group">
+                            <input type="radio" asp-for="Candidato.Genero" value="true" />Hombre<br />
+                            <input type="radio" asp-for="Candidato.Genero" value="false" />Mujer<br />
+                            <!--  <input asp-for="Candidato.Genero" class="form-control" type="radio" /><br />-->
 
-            <div class="form-group">
-                <label for="nombre del candidato">Nombre del Candidato</label><br />
-                <input type="text" placeholder="  Nombre                  Apellido Paterno      Apellido Materno " size="50"/><br />
-                <br />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Fecha de nacimiento">Fecha de Nacimiento</label>
+                            <input asp-for="Candidato.Fecha_Nam" type="date" size="40" class="form-control" />
+                            <span class="text-danger" asp-validation-for="Candidato.Fecha_Nam"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="age">Edad</label>
+                            <input asp-for="Candidato.Edad" class="form-control" size="30" placeholder="Edad" /><br />
+                            <span class="text-danger" asp-validation-for="Candidato.Edad"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="estado civil">Seleccione una opción</label><br />
+                            <select id="estado civil">
+
+                                <option value="Estado Civil"></option>
+                                <option value="soltero">Soltero</option>
+                                <option value="casado">Casado</option>
+                                <option value="divorciado">Divorciado</option>
+                                <option value="viudo">Viudo</option>
+                            </select>
+                            <input asp-for="Candidato.Estado_civil" class="form-control" />
+                            <span class="text-danger" asp-validation-for="Candidato.Estado_civil"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="curp">CURP</label><br />
+                            <input type="text" size="30" asp-for="Candidato.Curp" />
+                            <span class="text-danger" asp-validation-for="Candidato.Curp"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="imss">NSS</label><br />
+                            <input type="text" size="30" asp-for="Candidato.NSS" />
+                            <span class="text-danger" asp-validation-for="Candidato.NSS"></span>
+                        </div>
+
+                        <div>
+                            <label for="rfc">RFC</label><br />
+                            <input type="text" size="30" asp-for="Candidato.RFC" />
+                            <span class="text-danger" asp-validation-for="Candidato.RFC"></span>
+                        </div>
+
+                        <div>
+                            <label for="rfc">RFC</label><br />
+                            <input type="text" size="30" asp-for="Candidato.RFC" />
+                            <span class="text-danger" asp-validation-for="Candidato.RFC"></span>
+                        </div>
+
+
+
+                        <button type="submit" value="" class="btn btn-primary">Registrar</button>
+                        <button type="submit" value="" class="btn btn-danger" asp-page="RegistroEmpresa">Cancelar</button>
+
+                    </form>
+                </div>
+                <div class="col-md-3"></div>
             </div>
-
-            <div>
-                <form>
-                    <label for="genero">Género</label><br />
-                    <input type="radio" id="masculino" name="genero" value="masculino" />
-                    <label for="masculino">Masculino</label><br />
-                    <input type="radio" id="femenino" name="genero" value="femenino" />
-                    <label for="femenino">Femenino</label><br />
-                    <input type="radio" id="otro" name="genero" value="otro" />
-                    <label for="otro">Otro</label>
-                </form>
-            </div>
-            
-            <div class="form-group">
-                 <label for="fecha de nacimiento">Fecha de Nacimiento</label><br />
-                <input type="date" size="40" />
-            </div>
-
-            <div class="form-group">
-                <label for="lugar de nacimiento">Lugar de Nacimiento</label><br />
-                <input type="text" size="40" />
-            </div>
-       
-            <div class="form-group">
-                <label for="edad">Edad</label><br />
-                <input type="text" size="30" />
-            </div>
-            
-            <div class="form-group">
-                <label for="estado civil">Seleccione una opción</label><br />
-                <select id="estado civil">
-                    
-                    <option value="Estado Civil"></option>
-                    <option value="soltero">Soltero</option>
-                    <option value="casado">Casado</option>
-                    <option value="divorciado">Divorciado</option>
-                    <option value="viudo">Viudo</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="curp">CURP</label><br />
-                <input type="text" size="30" />
-            </div>
-
-            <div class="form-group">
-                <label for="imss">NSS</label><br />
-                <input type="text" size="30" />
-            </div>
-
-             <div>
-                 <label for="rfc">RFC</label><br />
-                 <input type="text" size="30"/>
-             </div>
-             
-
-</body>
-
+        </div>
+    </body>
+   
 <style>
 
     body {
@@ -123,7 +135,16 @@
         color: black; /*color de las letras*/
         font-size: 16px; /*tamaño de las letras*/
     }
-    
+
+    .button {
+        position: page;
+        top: 40%; /*donde quedará centrado*/
+        left: auto;
+        background: white; /*color de fondo del input*/
+        color: black; /*color de las letras*/
+        font-size: 18px;
+        cursor: pointer; /*sirve para indicar que función hará el botón*/
+    }
 
 
 

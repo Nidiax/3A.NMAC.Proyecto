@@ -13,11 +13,7 @@ namespace Work_IO_UI.Pages
 {
     public class RegistroModel : PageModel
     {
-        public void OnGet()
-        {
-
-        }
-
+   
         [BindProperty]
         public Empresa Empresa { get; set; }
         public IWebHostEnvironment HostEnvironment { get; }
@@ -35,9 +31,14 @@ namespace Work_IO_UI.Pages
                 return Page();
 
             var id = repositoryW.Insert(Empresa);
-                return RedirectToPage("/RegistroCandidatoModel");
+
+                return RedirectToPage("/RegistroCandidato");
         }
-        
+
+        public void OnGet()
+        {
+
+        }
 
 
 

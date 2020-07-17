@@ -12,7 +12,7 @@ namespace Work_IO.Models
     {
        // [Key]
       //  public int ReferenciasId { get; set; }
-        [Display(Name ="Nombre")]
+        [Display(Name ="Nombre Comercial")]
         [Required(ErrorMessage ="Este campo {0} es obligatorio")]
         public string Nombre { get; set; }
         [Display(Name ="Numero Teléfonico")]
@@ -41,7 +41,7 @@ namespace Work_IO.Models
         [Display(Name ="Función del Último Puesto")]
         public string Fun_ultimopuesto { get; set; }
         [Display(Name ="Desempeño")]
-        public string Desempeño { get; set; }
+        public string Desempenio { get; set; }
         [Display(Name ="Observaciones")]
         public string Observaciones { get; set; }
 

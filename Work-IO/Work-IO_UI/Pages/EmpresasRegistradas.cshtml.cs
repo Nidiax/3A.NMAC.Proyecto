@@ -14,7 +14,7 @@ namespace Work_IO_UI.Pages
     {
         public void OnGet()
         {
-           
+            Empresas = repositoryW.GetAll();
         }
 
         private readonly IRepositoryW<Empresa> repositoryW;

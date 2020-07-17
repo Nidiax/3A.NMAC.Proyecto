@@ -10,7 +10,7 @@ using Work_IO.Services;
 namespace Work_IO.Services.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20200704023835_InitialMigration")]
+    [Migration("20200710015402_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

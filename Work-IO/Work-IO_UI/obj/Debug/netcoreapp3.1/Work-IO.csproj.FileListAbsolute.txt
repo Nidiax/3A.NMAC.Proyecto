@@ -267,3 +267,6 @@ C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\bin\Debug\netcoreapp3.1\Micr
 C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\bin\Debug\netcoreapp3.1\Work-IO.Services.pdb
 C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\bin\Debug\netcoreapp3.1\Work-IO.Models.pdb
 C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\EmpresasRegistradas.cshtml.g.cs
+C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Orden.cshtml.g.cs
+C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\List.cshtml.g.cs
+C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\CandidatosRegistrados.cshtml.g.cs
