@@ -20,6 +20,10 @@
                 <th scope="col">@Html.DisplayNameFor(x => x.Candidatos.FirstOrDefault().Curp)</th>
                 <th scope="col">@Html.DisplayNameFor(x => x.Candidatos.FirstOrDefault().NSS)</th>
                 <th scope="col">@Html.DisplayNameFor(x => x.Candidatos.FirstOrDefault().RFC)</th>
+                <th scope="col">@Html.DisplayNameFor(x => x.Candidatos.FirstOrDefault().Nacionalidad)</th>
+                <th scope="col">@Html.DisplayNameFor(x => x.Candidatos.FirstOrDefault().OrdenId)</th>
+                <th scope="col">@Html.DisplayNameFor(x => x.Candidatos.FirstOrDefault().DocumentoId)</th>
+                <th scope="col">@Html.DisplayNameFor(x => x.Candidatos.FirstOrDefault().ReferenciasId)</th>
 
                
             </tr>
@@ -37,6 +41,10 @@
                     <td>@Html.DisplayFor(m => item.Curp)</td>
                     <td>@Html.DisplayFor(m => item.NSS)</td>
                     <td>@Html.DisplayFor(m => item.RFC)</td>
+                    <td>@Html.DisplayFor(m => item.Nacionalidad)</td>
+                    <td>@Html.DisplayFor(m => item.OrdenId)</td>
+                    <th>@Html.DisplayFor(m => item.DocumentoId)</th>
+                    <th>@Html.DisplayFor(m => item.ReferenciasId)</th>
 
                 </tr>
              }

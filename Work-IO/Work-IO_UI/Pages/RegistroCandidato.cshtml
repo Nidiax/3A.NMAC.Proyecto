@@ -46,8 +46,6 @@
                                 <option value="divorciado">Divorciado</option>
                                 <option value="viudo">Viudo</option>
                             </select>
-                            <input asp-for="Candidato.Estado_civil" class="form-control" />
-                            <span class="text-danger" asp-validation-for="Candidato.Estado_civil"></span>
                         </div>
 
                         <div class="form-group">
@@ -69,14 +67,31 @@
                         </div>
 
                         <div>
-                            <label for="rfc">RFC</label><br />
-                            <input type="text" size="30" asp-for="Candidato.RFC" />
-                            <span class="text-danger" asp-validation-for="Candidato.RFC"></span>
+                            <label for="nacionalidad">Nacionalidad</label><br />
+                            <input type="text" size="30" asp-for="Candidato.Nacionalidad" />
+                            <span class="text-danger" asp-validation-for="Candidato.Nacionalidad"></span>
                         </div>
 
+                        <div>
+                            <label for="orden">OrdenId</label><br />
+                            <input type="number" size="30" asp-for="Candidato.OrdenId" />
+                            <span class="text-danger" asp-validation-for="Candidato.OrdenId"></span>
 
+                        </div>
 
-                        <button type="submit" value="" class="btn btn-primary">Registrar</button>
+                        <div>
+                            <label for="documento">DocumentosId</label><br />
+                            <input type="number" size="30" asp-for="Candidato.DocumentoId" />
+                            <span class="text-danger" asp-validation-for="Candidato.DocumentoId"></span>
+                        </div>
+
+                        <div>
+                            <label for="referencias">ReferenciasId</label><br />
+                            <input type="text" size="30" asp-for="Candidato.ReferenciasId" />
+                            <span class="text-danger" asp-validation-for="Candidato.ReferenciasId"></span>
+                        </div>
+
+                        <button type="submit" value="" class="btn btn-primary">Registrar</button> |
                         <button type="submit" value="" class="btn btn-danger" asp-page="RegistroEmpresa">Cancelar</button>
 
                     </form>

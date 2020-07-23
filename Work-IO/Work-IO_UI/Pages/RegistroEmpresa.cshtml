@@ -34,7 +34,13 @@
                         <input asp-for="Empresa.Correo" class="form-control" type="email" size="40" placeholder=" consumidor@coca-cola.com" /><br />
                         <span class="text-danger" asp-validation-for="Empresa.Correo"></span>
                     </div>
-                    <button type="submit" value="" class="btn btn-primary">Registrar</button>
+
+                    <div class="form-group">
+                        <label for="ordenid">OrdenId</label>
+                        <input asp-for="Empresa.OrdenId" class="form-control" type="number"/>
+                        <span class="text-danger" asp-validation-for="Empresa.OrdenId"></span>
+                    </div>
+                    <button type="submit" value="" class="btn btn-primary">Registrar</button> |
                     <button type="submit" value="" class="btn btn-danger" asp-page="Index">Cancelar</button>
 
                 </form>

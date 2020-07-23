@@ -15,6 +15,7 @@
                     <th scope="col">@Html.DisplayNameFor(x => x.Empresas.FirstOrDefault().Direccion)</th>
                     <th scope="col">@Html.DisplayNameFor(x => x.Empresas.FirstOrDefault().Numero)</th>
                     <th scope="col">@Html.DisplayNameFor(x => x.Empresas.FirstOrDefault().Correo)</th>
+                    <th scope="col">@Html.DisplayNameFor(x => x.Empresas.FirstOrDefault().OrdenId)</th>
                    
                     <th scope="col"></th>
                 </tr>
@@ -28,6 +29,7 @@
                         <td>@Html.DisplayFor(m => item.Direccion)</td>
                         <td>@Html.DisplayFor(m => item.Numero)</td>
                         <td>@Html.DisplayFor(m => item.Correo)</td>
+                        <th>@Html.DisplayFor(m => item.OrdenId)</th>
                      
                     </tr>
                 }
