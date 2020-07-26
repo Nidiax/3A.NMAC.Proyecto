@@ -28,6 +28,6 @@ namespace Work_IO.Models
         //Asociaciones
         //La empresa puede tener muchas ordenes
         public int OrdenId { get; set; }
-       
+        public  Orden Orden{ get; set; }
     }
 }

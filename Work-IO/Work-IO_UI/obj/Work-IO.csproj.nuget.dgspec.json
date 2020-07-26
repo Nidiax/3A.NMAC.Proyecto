@@ -183,6 +183,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "C:\\git-proyecto\\3A.NMAC.Proyecto\\Work-IO\\Work-IO.Models\\Work-IO.Models.csproj": {
+                "projectPath": "C:\\git-proyecto\\3A.NMAC.Proyecto\\Work-IO\\Work-IO.Models\\Work-IO.Models.csproj"
+              },
               "C:\\git-proyecto\\3A.NMAC.Proyecto\\Work-IO\\Work-IO.Services\\Work-IO.Services.csproj": {
                 "projectPath": "C:\\git-proyecto\\3A.NMAC.Proyecto\\Work-IO\\Work-IO.Services\\Work-IO.Services.csproj"
               }

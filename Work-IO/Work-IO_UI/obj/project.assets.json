@@ -9087,6 +9087,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 3.1.5",
       "Microsoft.EntityFrameworkCore.SqlServer.Design >= 1.1.6",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.3",
+      "Work-IO.Models >= 1.0.0",
       "Work-IO.Services >= 1.0.0"
     ]
   },
@@ -9121,6 +9122,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+            "C:\\git-proyecto\\3A.NMAC.Proyecto\\Work-IO\\Work-IO.Models\\Work-IO.Models.csproj": {
+              "projectPath": "C:\\git-proyecto\\3A.NMAC.Proyecto\\Work-IO\\Work-IO.Models\\Work-IO.Models.csproj"
+            },
             "C:\\git-proyecto\\3A.NMAC.Proyecto\\Work-IO\\Work-IO.Services\\Work-IO.Services.csproj": {
               "projectPath": "C:\\git-proyecto\\3A.NMAC.Proyecto\\Work-IO\\Work-IO.Services\\Work-IO.Services.csproj"
             }

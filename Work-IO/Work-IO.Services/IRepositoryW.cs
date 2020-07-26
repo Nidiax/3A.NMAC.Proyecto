@@ -10,6 +10,7 @@ namespace Work_IO.Services
     public interface IRepositoryW<T> where T : BaseEntity
     {
         public IEnumerable<T> GetAll();
+       // public Empresa Get(int);
         public T Get(int id);
         public int Insert(T obj);
         public void Update(T obj);

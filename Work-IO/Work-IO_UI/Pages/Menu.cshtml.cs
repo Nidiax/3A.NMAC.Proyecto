@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Work_IO_UI.Pages
 {
-    public class OrdenModel : PageModel
+    public class MenuModel : PageModel
     {
         public void OnGet()
         {

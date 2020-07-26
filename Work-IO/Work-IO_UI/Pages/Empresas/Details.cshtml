@@ -1,0 +1,51 @@
+﻿@page
+@model Work_IO_UI.Pages.Empresas.DetailsModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Empresa</h1>
+<dl class="d-flex flex-row p-2">
+    <dt class="col-sm-4">
+        Id:
+    </dt>
+    <dd class="col-sm-9">
+        @Html.DisplayFor(model => model.Empresa.Id)
+    </dd>
+    <dt class="col-sm-4">
+        Nombre:
+    </dt>
+    <dd class="col-sm-9">
+        @Html.DisplayFor(model => model.Empresa.Nombre)
+    </dd>
+    <dt class="col-sm-4">
+        Dirección:
+    </dt>
+    <dd class="col-sm-9">
+        @Html.DisplayFor(model => model.Empresa.Direccion)
+    </dd>
+    <dt class="col-sm-4">
+        Número Teléfonico:
+    </dt>
+    <dd class="col-sm-9">
+        @Html.DisplayFor(model => model.Empresa.Numero)
+    </dd>
+    <dt class="col-sm-4">
+        Correo electrónico:
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Empresa.Correo)
+    </dd>
+    <dt class="col-sm-4">
+        Orden al que pertenece:
+    </dt>
+    <dd class="col-sm-9">
+        @Html.DisplayFor(model => model.Empresa.OrdenId)
+    </dd>
+</dl>
+<div class="d-flex justify-content-end">
+    <a asp-page="/Menu" class="btn btn-light m-1">Regresar</a>
+    <a href="#" class="btn btn-success m-1">Editar</a>
+    <a href="#" class="btn btn-danger m-1">Eliminar</a>
+
+</div>

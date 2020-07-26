@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Work-IO.Models\Work-IO.Models.csproj" />
     <ProjectReference Include="..\Work-IO.Services\Work-IO.Services.csproj" />
   </ItemGroup>
 

@@ -1,7 +1,7 @@
 ﻿@page
-@model Work_IO_UI.Pages.RegistroModel
+@model Work_IO_UI.Pages.Empresas.CreateModel
 @{
-    ViewData["Title"] = "Registro";
+    ViewData["Title"] = "Create";
 }
 
 <h1 class="text-center">Registro de la Empresa</h1>
@@ -13,7 +13,7 @@
                 <form method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="Nombre de la Empresa">Nombre de la Empresa</label>
-                        <input type="text" class="form-control" size="80" placeholder=" Coca-Cola FEMSA SA de CV " asp-for="Empresa.Nombre" />
+                        <input type="text" class="form-control" placeholder=" Coca-Cola FEMSA SA de CV " asp-for="Empresa.Nombre" />
                         <span class="text-danger" asp-validation-for="Empresa.Nombre"></span>
                     </div>
 
@@ -37,7 +37,7 @@
 
                     <div class="form-group">
                         <label for="ordenid">OrdenId</label>
-                        <input asp-for="Empresa.OrdenId" class="form-control" type="number"/>
+                        <input asp-for="Empresa.OrdenId" class="form-control" type="number" />
                         <span class="text-danger" asp-validation-for="Empresa.OrdenId"></span>
                     </div>
                     <button type="submit" value="" class="btn btn-primary">Registrar</button> |
@@ -50,55 +50,3 @@
     </div>
 </body>
 
-<style>
-    .registro label {
-        margin: 0px;
-        padding: 0px;
-        display: block;
-        font-weight: bold;
-        color: white;
-    }
-
-    .registro input[type="email"], .registro input[type="password"] {
-        border-style: solid; /*le da borde al input*/
-        border-width: medium; /*le deja el borde completamente negro y delgado*/
-        background: white; /*color de fondo del input*/
-        color: black; /*color de las letras*/
-        font-size: 16px; /*tamaño de las letras*/
-        height: 40px; /*tamaño del cuadrado, o sea en lo largo*/
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: initial; /*tipo de letra para toda la página*/
-        margin: 0; /*margenes*/
-        padding: 0;
-        background-color: cadetblue; /*sirve para poner en el fondo de la página un color*/
-        border-radius: 5px;
-    }
-
-   /*.button {
-        position: page;
-        top: 40%; /*donde quedará centrado*/
-      /*  left: auto;
-        background: white; /*color de fondo del input*/
-     /*   color: black; /*color de las letras*/
-       /* font-size: 18px;
-        cursor: pointer; /*sirve para indicar que función hará el botón*/
-  /* } */
-    
-    .registro input {
-        margin-bottom: 20px; /*espacio que hay entre los input*/
-    }
-
-
-        .registro input[type="text"] {
-            border-style: solid; /*le da borde al input*/
-            border-width: medium; /*le deja el borde completamente negro y delgado*/
-            background: white; /*color de fondo del input*/
-            color: black; /*color de las letras*/
-            font-size: 16px; /*tamaño de las letras*/
-            height: 40px; /*tamaño del cuadrado, o sea en lo largo*/
-            box-sizing: border-box;
-        }
-</style>
