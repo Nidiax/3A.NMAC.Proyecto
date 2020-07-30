@@ -4,48 +4,5 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Editar Empresas</h1>
-
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Empresa.Id" />
-            <div class="form-group">
-                <label asp-for="Empresa.Id" class="control-label">Id:</label>
-                <input asp-for="Empresa.Id" class="form-control" />
-                <span asp-validation-for="Empresa.Id" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Empresa.Nombre" class="control-label">Nombre:</label>
-                <input asp-for="Empresa.Nombre" class="form-control" />
-                <span asp-validation-for="Empresa.Nombre" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Empresa.Direccion" class="control-label">Dirección:</label>
-                <input asp-for="Empresa.Direccion" class="form-control" />
-                <span asp-validation-for="Empresa.Direccion" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Empresa.Numero" class="control-label">Numero Telefónico</label>
-                <input asp-for="Empresa.Numero" class="form-control"/>
-                <span asp-validation-for="Empresa.Numero" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Empresa.Correo" class="control-label">Correo electrónico:</label>
-                <input asp-for="Empresa.Numero" class="form-control" />
-                <span asp-validation-for="Empresa.Numero" class="text-danger"></span>
-            </div>
-            <div class="form-control">
-                <label asp-for="Empresa.OrdenId" class="control-label">Orden en la que se encuentra:</label>
-                <input asp-for="Empresa.OrdenId" class="form-control" />
-                <span asp-validation-for="Empresa.OrdenId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Guardar" class="btn btn-info" />
-                <a class="btn btn-light" asp-page="/Empresas/Index">Cancelar</a>
-            </div>
-        </form>
-    </div>
-</div>
+<h1>Edit</h1>
 

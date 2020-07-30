@@ -5,76 +5,80 @@
 }
 
 <h1>Menú</h1>
-<div class="card-deck">
-    <div class="row">
-        <div class="row-cols-sm-4">
-            <div class="card bg-light m-3" style="min-width:20rem; max-width:40%">
+
+<div class="card-group">
+    <div class="col mb-4">
+        <div class="card" style="width: 18rem;">
+            <div class="row-cols-sm-4">
                 <div class="card-body">
-                    <h5 class="card-title">Empresas</h5>
-                </div>
-                <div class="card-body">
-                    <p>Aquí se muestra la información de la empresas</p>
-                </div>
-                <div class="card-footer text-center">
+                    <h5 class="card-title text-center">Empresas</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Aquí se encuentra la información de las empresas</h6>
+                    <p class="card-text">Todo lo encontrará aquí</p>
+                    <a asp-page="/Empresas/Index" class="btn btn-primary">Listado</a> |
                     <a asp-page="/Empresas/Create" class="btn btn-success">Registrar</a>
-                    <a asp-page="/Empresas/Index" class="btn btn-info">Ver</a>
-                    <a asp-page="/Empresas/Details" class="btn btn-warning">Detalles</a>
-                    <a href="./Edit" class="btn btn-secondary">Editar</a>
-                    <a href="./Delete" class="btn btn-danger">Eliminar</a>
                 </div>
             </div>
+            <div class="row-cols-sm-4"></div>
+        </div>
+    </div>
+
+    <div class="col mb-4">
+        <div class="card" style="width: 18rem;">
+            <div class="row-cols-sm-4">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Ordenes</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Aquí se encuentra la información de las ordenes</h6>
+                    <p class="card-text">Todo lo encontrará aquí</p>
+                    <a asp-page="/Ordenes/Index" class="btn btn-primary">Listado</a> |
+                    <a asp-page="/Ordenes/Create" class="btn btn-success">Registrar</a>
+                </div>
+            </div>
+            <div class="row-cols-sm-4"></div>
+        </div>
+    </div>
+
+
+    <div class="col mb-4">
+        <div class="card" style="width: 18rem;">
+            <div class="row-cols-sm-4">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Candidatos</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Aquí se encuentra la información de las candidatos</h6>
+                    <p class="card-text">Todo lo encontrará aquí</p>
+                    <a asp-page="/Candidatos/Index" class="btn btn-primary">Listado</a> |
+                    <a asp-page="/Candidatos/Create" class="btn btn-success">Registrar</a>
+                </div>
+            </div>
+            <div class="row-cols-sm-4"></div>
+        </div>
+    </div>
+
+    <div class="col mb-4">
+        <div class="card" style="width: 18rem;">
+            <div class="row-cols-sm-4">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Referencias</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Aquí se encuentra la información de las referencias</h6>
+                    <p class="card-text">Todo lo encontrará aquí</p>
+                    <a asp-page="/Referencias/Index" class="btn btn-primary">Listado</a> |
+                    <a asp-page="/Referencias/Create" class="btn btn-success">Registrar</a>
+                </div>
+            </div>
+            <div class="row-cols-sm-4"></div>
         </div>
     </div>
 </div>
 
-<div class="card-deck">
-    <div class="card bg-light m-3" style="min-width:18rem; max-width:30.5%">
-        <div class="card-body">
-            <h5 class="card-title">Ordenes</h5>
-        </div>
-        <div class="card-body">
-            <p>Aquí se muestra la información de la ordenes</p>
-        </div>
-        <div class="card-footer text-center">
-            <a href="./Create" class="btn btn-success">Registrar</a>
-            <a href="./Detalis" class="btn btn-info">Ver</a>
-            <a href="./Edit" class="btn btn-secondary">Editar</a>
-            <a href="./Delete" class="btn btn-danger">Eliminar</a>
-        </div>
-    </div>
-</div>
 
-<div class="card-deck">
-    <div class="card bg-light m-4" style="min-width:18rem; max-width:30.5%">
-        <div class="card-body">
-            <h5 class="card-title">Candidatos</h5>
-        </div>
-        <div class="card-body">
-            <p>Aquí se muestra la información de los candidatos</p>
-        </div>
-        <div class="card-footer text-center">
-            <a href="./Create" class="btn btn-success">Registrar</a>
-            <a href="./Detalis" class="btn btn-info">Ver</a>
-            <a href="./Edit" class="btn btn-secondary">Editar</a>
-            <a href="./Delete" class="btn btn-danger">Eliminar</a>
-        </div>
-    </div>
-</div>
 
-<div class="card-deck">
-    <div class="card bg-light m-3" style="min-width:18rem; max-width:30.5%">
-        <div class="card-body">
-            <h5 class="card-title">Referencias</h5>
-        </div>
-        <div class="card-body">
-            <p>Aquí se muestra la información de las referencias laborales</p>
-        </div>
-        <div class="card-footer text-center">
-            <a  asp-page="./Create" class="btn btn-success">Registrar</a>
-            <a  asp-page="./Details" class="btn btn-info">Ver</a>
-            <a  asp-page="./Edit" class="btn btn-secondary">Editar</a>
-            <a  asp-page="./Delete" class="btn btn-danger">Eliminar</a>
-        </div>
-    </div>
-</div>
+
+
+
+
+
+
+
+
+
+
 

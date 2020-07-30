@@ -4,52 +4,5 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Eliminar Empresa</h1>
-<div>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-3">
-            Id:
-        </dt>
-        <dd class="col-sm-9">
-            @Html.DisplayFor(model => model.Empresa.Id)
-        </dd>
-        <dt class="col-sm-3">
-            Nombre:
-        </dt>
-        <dd class="col-sm-9">
-            @Html.DisplayFor(model => model.Empresa.Nombre)
-        </dd>
-        <dt class="col-sm-3">
-            Dirección:
-        </dt>
-        <dd class="col-sm-9">
-            @Html.DisplayFor(model => model.Empresa.Direccion)
-        </dd>
-        <dt class="col-sm-3">
-            Numero telefónico:
-        </dt>
-        <dd class="col-sm-9">
-            @Html.DisplayFor(model => model.Empresa.Numero)
-        </dd>
-        <dt class="col-sm-3">
-            Correo electrónico:
-        </dt>
-        <dd class="col-sm-9">
-            @Html.DisplayFor(model => model.Empresa.Correo)
-        </dd>
-        <dt class="col-sm-3">
-            Orden a la que pertenece:
-        </dt>
-        <dd class="col-sm-9">
-            @Html.DisplayFor(model => model.Empresa.OrdenId)
-        </dd>
-    </dl>
-
-    <form method="post">
-        <input type="hidden" asp-for="Empresa.OrdenId" />
-        <input type="submit" value="Eliminar" class="btn btn-danger" />
-        <a class="btn btn-light" asp-page="/Empresas/Index">Cancelar</a>
-    </form>
-</div>
+<h1>Delete</h1>
 

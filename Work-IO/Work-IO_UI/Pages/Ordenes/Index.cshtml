@@ -1,0 +1,42 @@
+﻿@page
+@model Work_IO_UI.Pages.Ordenes.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Ordenes Registradas</h1>
+@if (Model.Ordenes.Any())
+{<table class="table table-info table-striped">
+        <!--Head-->
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(x => x.Ordenes.FirstOrDefault().Id)</th>
+                <th scope="col">@Html.DisplayNameFor(x => x.Ordenes.FirstOrDefault().TipoVacante)</th>
+                <th scope="col">@Html.DisplayNameFor(x => x.Ordenes.FirstOrDefault().EmpresaId)</th>
+                
+
+
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Ordenes)
+             {
+                <tr>
+                    <th scope="row">@Html.DisplayFor(m => item.Id)</th>
+                    <td>@Html.DisplayFor(m => item.TipoVacante)</td>
+                    <td>@Html.DisplayFor(m => item.EmpresaId)</td>
+                  
+
+
+                </tr>
+             }
+        </tbody>
+    </table>
+ }
+
+<div class="row">
+    <a class="btn btn-success" asp-page="/Ordenes/Details" type="button">Detalles</a>
+    <a class="btn btn-warning" asp-page="/Ordenes/Edit" type="button">Editar</a>
+    <a class="btn btn-danger" asp-page="/Ordenes/Delete" type="button">Eliminar</a>
+</div>

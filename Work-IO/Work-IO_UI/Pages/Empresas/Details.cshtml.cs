@@ -4,37 +4,23 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
-using Work_IO.Models;
 using Work_IO.Services;
+using Work_IO.Models;
 
 namespace Work_IO_UI.Pages.Empresas
 {
     public class DetailsModel : PageModel
     {
-        private readonly AppDBContext _context;
-        public Empresa Empresa { get; set; }
-        public DetailsModel(AppDBContext context)
+        private readonly IRepositoryW<Empresa> repositoryW;
+        public IEnumerable<Empresa> Empresas { get; set; }
+        public Empresa Empresa { get; private set; }
+        public DetailsModel(IRepositoryW<Empresa> repositoryW)
         {
-            _context = context;
+            this.repositoryW = repositoryW;
         }
-        public async Task<IActionResult> OnGetAsync(int? id)
+        public void OnGet(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            Empresa = await _context.Empresas
-                .Include(d => d.OrdenId).FirstOrDefaultAsync(k => k.Id == id);
-
-            if (Empresa == null)
-            {
-                return NotFound();
-
-            }
-            return Page();
+            Empresas = repositoryW.GetAll();
         }
-       
     }
 }

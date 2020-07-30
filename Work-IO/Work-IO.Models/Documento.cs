@@ -12,8 +12,11 @@ namespace Work_IO.Models
        // public int DocumentoId { get; set; }
         
         //tipo de documento
+        [Display(Name ="Tipo de Documentación")]
         public string TipoD { get; set; }
 
-        //A un candidato le pertenece los documentos
+       //Asociacion de candidato
+       public int CandidatoId { get; set; }
+        public Candidato Candidato { get; set; }
     }
 }

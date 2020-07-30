@@ -14,11 +14,12 @@ namespace Work_IO_UI.Pages.Empresas
     {
         public void OnGet()
         {
-            
+            Empresas = repositoryW.GetAll();
         }
 
         private readonly IRepositoryW<Empresa> repositoryW;
         public IEnumerable<Empresa> Empresas { get; set; }
+        public Empresa Empresa { get; private set; }
         public IWebHostEnvironment HostEnvironment { get; }
         public IndexModel(IRepositoryW<Empresa> repositoryW, IWebHostEnvironment hostEnvironment)
         {

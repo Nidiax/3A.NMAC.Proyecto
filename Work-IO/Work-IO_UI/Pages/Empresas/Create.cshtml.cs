@@ -36,7 +36,7 @@ namespace Work_IO_UI.Pages.Empresas
                 return Page();
 
             var id = repositoryW.Insert(Empresa);
-            return RedirectToPage("/RegistroCandidato");
+            return RedirectToPage("/Ordenes/Create");
         }
     }
 }

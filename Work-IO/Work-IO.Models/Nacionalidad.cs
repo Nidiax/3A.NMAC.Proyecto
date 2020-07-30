@@ -11,10 +11,12 @@ namespace Work_IO.Models
       //  [Key]
        // public int NacionalidadId { get; set; }
         //Tipo de nacionalidad
-        [Display(Name ="Tipo de Documentanción")]
+        [Display(Name ="Tipo de Nacionalidad")]
         public string TipoNa { get; set; }
 
-
+        //Asociaciones
+        //Asociacion con candidato
+        public int CandidatoId { get; set; }
 
     }
 }

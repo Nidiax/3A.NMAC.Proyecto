@@ -15,35 +15,35 @@
                 <th scope="col">@Html.DisplayNameFor(x => x.Empresas.FirstOrDefault().Direccion)</th>
                 <th scope="col">@Html.DisplayNameFor(x => x.Empresas.FirstOrDefault().Numero)</th>
                 <th scope="col">@Html.DisplayNameFor(x => x.Empresas.FirstOrDefault().Correo)</th>
-                <th scope="col">@Html.DisplayNameFor(x => x.Empresas.FirstOrDefault().OrdenId)</th>
+
 
                 <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model.Empresas)
-             {
+            {
                 <tr>
                     <th scope="row">@Html.DisplayFor(m => item.Id)</th>
                     <td>@Html.DisplayFor(m => item.Nombre)</td>
                     <td>@Html.DisplayFor(m => item.Direccion)</td>
                     <td>@Html.DisplayFor(m => item.Numero)</td>
                     <td>@Html.DisplayFor(m => item.Correo)</td>
-                    <th>@Html.DisplayFor(m => item.OrdenId)</th>
-
+                    <td><a class="btn btn-success" asp-page="/Empresas/Details" type="button">Detalles</a></td>
+                    <td><a class="btn btn-warning" asp-page="/Empresas/Edit" type="button">Editar</a></td>
+                    <td><a class="btn btn-danger" asp-page="/Empresas/Delete" type="button">Eliminar</a></td>
                 </tr>
-             }
+            }
         </tbody>
+
+
+
     </table>
- }
+}
 
 
-<div class="row">
-    <button asp-page="./Create" type="button" class="btn btn-secondary">Registrar</button>
-    <button asp-page="./Details" type="button" class="btn btn-success">Detalles</button>
-    <button asp-page="./Edit" type="button" class="btn btn-warning">Editar</button>
-    <button asp-page="./Delete" type="button" class="btn btn-danger">Eliminar</button>
-</div>
 
 
- 
+
+
+

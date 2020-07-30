@@ -12,7 +12,7 @@ namespace Work_IO.Models
        // [Display(Name = "Id")]  //muestra el nombre la propiedad//
        // [Key]
        // public int CandidatoId { get; set; }
-        [Display(Name = "Nombre", Prompt = "Nombre   Apellido Paterno   Apellido Materno")] //prompt es una marca de agua, parecido al placeholder//
+        [Display(Name = "Nombre")] //prompt es una marca de agua, parecido al placeholder//
         public string Nombre { get; set; }
         [Display(Name = "Genero")] //, Prompt ="Seleccione una opcion"//
         public bool Genero { get; set; }
@@ -35,21 +35,18 @@ namespace Work_IO.Models
         public string RFC { get; set; }
 
         //Asociaciones 
-        //Un candidato puede estar en muchas órdenes
+        //Asociaciones para orden
         public int OrdenId { get; set; }
         public Orden Orden { get; set; }
-
 
         //Asociaones para nacionalidad
         public int NacionalidadId { get; set; }
         public Nacionalidad Nacionalidad { get; set; }
 
         //Asociaciones para documentos
-        public int DocumentoId { get; set; }
         public ICollection<Documento> Documentos { get; set; }
 
         //Asociaciones para referencias
-        public int ReferenciasId { get; set; }
         public ICollection<Referencias> Referencias { get; set; }
  
    }

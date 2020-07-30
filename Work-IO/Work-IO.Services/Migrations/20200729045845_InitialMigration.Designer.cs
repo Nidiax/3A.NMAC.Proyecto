@@ -10,7 +10,7 @@ using Work_IO.Services;
 namespace Work_IO.Services.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20200710015402_InitialMigration")]
+    [Migration("20200729045845_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -65,9 +65,6 @@ namespace Work_IO.Services.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("DocumentoId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Estado_civil")
                         .HasColumnType("nvarchar(max)");
 
@@ -90,6 +87,9 @@ namespace Work_IO.Services.Migrations
                     b.Property<int>("NacionalidadId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("NacionalidadId1")
+                        .HasColumnType("int");
+
                     b.Property<string>("Nombre")
                         .HasColumnType("nvarchar(max)");
 
@@ -100,15 +100,12 @@ namespace Work_IO.Services.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ReferenciasId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime?>("UpdatedAT")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("NacionalidadId");
+                    b.HasIndex("NacionalidadId1");
 
                     b.HasIndex("OrdenId");
 
@@ -149,7 +146,7 @@ namespace Work_IO.Services.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("CandidatoId")
+                    b.Property<int>("CandidatoId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAT")
@@ -177,9 +174,6 @@ namespace Work_IO.Services.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Contraseña")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Correo")
                         .HasColumnType("nvarchar(max)");
@@ -219,6 +213,9 @@ namespace Work_IO.Services.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("CandidatoId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CreatedAT")
                         .HasColumnType("datetime2");
 
@@ -243,16 +240,13 @@ namespace Work_IO.Services.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("AsesorId")
+                    b.Property<int?>("AsesorId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAT")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("EmpresaId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("EmpresaId1")
                         .HasColumnType("int");
 
                     b.Property<bool>("Estatus")
@@ -268,7 +262,7 @@ namespace Work_IO.Services.Migrations
 
                     b.HasIndex("AsesorId");
 
-                    b.HasIndex("EmpresaId1");
+                    b.HasIndex("EmpresaId");
 
                     b.ToTable("Ordenes");
                 });
@@ -286,7 +280,7 @@ namespace Work_IO.Services.Migrations
                     b.Property<DateTime>("CreatedAT")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Desempeño")
+                    b.Property<string>("Desempenio")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Direccion")
@@ -342,9 +336,7 @@ namespace Work_IO.Services.Migrations
                 {
                     b.HasOne("Work_IO.Models.Nacionalidad", "Nacionalidad")
                         .WithMany()
-                        .HasForeignKey("NacionalidadId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("NacionalidadId1");
 
                     b.HasOne("Work_IO.Models.Orden", "Orden")
                         .WithMany("Candidatos")
@@ -355,22 +347,24 @@ namespace Work_IO.Services.Migrations
 
             modelBuilder.Entity("Work_IO.Models.Documento", b =>
                 {
-                    b.HasOne("Work_IO.Models.Candidato", null)
+                    b.HasOne("Work_IO.Models.Candidato", "Candidato")
                         .WithMany("Documentos")
-                        .HasForeignKey("CandidatoId");
+                        .HasForeignKey("CandidatoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Work_IO.Models.Orden", b =>
                 {
-                    b.HasOne("Work_IO.Models.Asesor", "Asesor")
-                        .WithMany()
-                        .HasForeignKey("AsesorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("Work_IO.Models.Asesor", null)
+                        .WithMany("Ordenes")
+                        .HasForeignKey("AsesorId");
 
                     b.HasOne("Work_IO.Models.Empresa", "Empresa")
-                        .WithMany()
-                        .HasForeignKey("EmpresaId1");
+                        .WithMany("Ordenes")
+                        .HasForeignKey("EmpresaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Work_IO.Models.Referencias", b =>
