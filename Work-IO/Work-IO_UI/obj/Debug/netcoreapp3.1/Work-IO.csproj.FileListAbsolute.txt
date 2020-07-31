@@ -428,7 +428,6 @@ C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razo
 C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Empresas\Details.cshtml.g.cs
 C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Empresas\Delete.cshtml.g.cs
 C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Empresas\Edit.cshtml.g.cs
-C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Candidatos\Create.cshtml.g.cs
 C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Candidatos\Delete.cshtml.g.cs
 C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Candidatos\Details.cshtml.g.cs
 C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Candidatos\Edit.cshtml.g.cs
@@ -438,8 +437,5 @@ C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razo
 C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Ordenes\Edit.cshtml.g.cs
 C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Ordenes\Details.cshtml.g.cs
 C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Ordenes\Index.cshtml.g.cs
-C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Referencias\Create.cshtml.g.cs
-C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Referencias\Delete.cshtml.g.cs
-C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Referencias\Details.cshtml.g.cs
-C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Referencias\Edit.cshtml.g.cs
-C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Referencias\Index.cshtml.g.cs
+C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Referencia\Create.cshtml.g.cs
+C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Candidatos\Create.cshtml.g.cs

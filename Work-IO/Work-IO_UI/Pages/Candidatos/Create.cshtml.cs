@@ -15,23 +15,22 @@ namespace Work_IO_UI.Pages.Candidatos
         [BindProperty]
         public Candidato Candidato { get; set; }
         public Nacionalidad Nacionalidad { get; set; }
-        public Orden Orden { get; set; }
         public IWebHostEnvironment HostEnvironment { get; }
         private readonly IRepositoryW<Candidato> repositoryW;
         private readonly IRepositoryW<Nacionalidad> repositoryWN;
         private readonly IRepositoryW<Orden> repositoryWO;
-        public IEnumerable<Nacionalidad> ListNaci { get; set; }
+        public IEnumerable<Nacionalidad> ListNacionalidad { get; set; }
         public IEnumerable<Orden> ListOrden { get; set; }
         public CreateModel(IRepositoryW<Candidato> repository, IRepositoryW<Nacionalidad> repositoryWN, IRepositoryW<Orden> repositoryWO, IWebHostEnvironment hostEnvironment)
         {
             this.repositoryW = repository;
             HostEnvironment = hostEnvironment;
-            this.ListNaci = repositoryWN.GetAll();
+            this.ListNacionalidad = repositoryWN.GetAll();
             this.ListOrden = repositoryWO.GetAll();
         }
         public void OnGet()
         {
-
+            
         }
 
         public IActionResult OnPost()
@@ -40,7 +39,7 @@ namespace Work_IO_UI.Pages.Candidatos
                 return Page();
 
             var id = repositoryW.Insert(Candidato);
-            return RedirectToPage("/Referencias/Create");
+            return RedirectToPage("/Referencia/Create");
         }
     }
 }

@@ -29,15 +29,16 @@ namespace Work_IO.Models
         public string Curp { get; set; }
         [Display(Name = "Numero de Seguro Social")]
         [Required(ErrorMessage = "Este campo {0} es obligatorio")]
-        public string NSS { get; set; }
+        public int NSS { get; set; }
         [Display(Name = "RFC")]
         [Required(ErrorMessage = "Este campo {0} es obligatorio")]
-        public string RFC { get; set; }
+        public int RFC { get; set; }
 
         //Asociaciones 
         //Asociaciones para orden
         public int OrdenId { get; set; }
         public Orden Orden { get; set; }
+        public string TipoVacante { get; set; }
 
         //Asociaones para nacionalidad
         public int NacionalidadId { get; set; }
@@ -48,6 +49,6 @@ namespace Work_IO.Models
 
         //Asociaciones para referencias
         public ICollection<Referencias> Referencias { get; set; }
- 
-   }
+       
+    }
 }

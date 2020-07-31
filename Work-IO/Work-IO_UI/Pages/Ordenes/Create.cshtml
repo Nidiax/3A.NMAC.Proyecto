@@ -11,31 +11,29 @@
             <div class="col-md-3"></div>
             <div class="col-md-6">
                 <form method="post" enctype="multipart/form-data">
-
-                    <div>
-                        <label asp-for="Orden.Id">Empresa a la que pertenece:</label>
-                        <select class="custom-select" asp-for="Orden.EmpresaId" asp-items="@(new SelectList(Model.ListEmpresa, "Id","Nombre"))">
+                    <div class="col">
+                            <label asp-for="Orden.Id">Empresa a la que pertenece:</label>
+                            <select class="custom-select" asp-for="Orden.EmpresaId" asp-items="@(new SelectList(Model.ListEmpresa, "Id","Nombre"))">
                             <option>Selecciona la empresa</option>
-                        </select>
+                            </select>
                     </div>
 
-                    <div>
+                     <div class="col">
                         <label asp-for="Orden.Id">Asesor asignado:</label>
-                        <select class="custom-select" asp-for="Orden.AsesorId" asp-items="@(new SelectList(Model.ListAsesor, "Id","Nombre"))">
-                            <option>Selecciona el asesor</option>
+                        <select class="custom-select" asp-for="Orden.AsesorId" asp-items="@(new SelectList(Model.ListAsesor, "Id","Nombre","Apellidos"))">
+                          <option>Selecciona el asesor</option>
                         </select>
                     </div>
 
-                    <div class="form-group">
-                        <label for="tipo de vacante">Tipo de vacante</label>
+                   <div class="col">
+                        <label for="tipo de vacante">Tipo de vacante que desea:</label>
                         <input type="text" class="form-control" asp-for="Orden.TipoVacante" />
                         <span class="text-danger" asp-validation-for="Orden.TipoVacante"></span>
-                    </div>
-
-
+                    </div><br />
 
                     <button type="submit" value="Registrar" class="btn btn-primary">Registrar</button> |
-                    <button type="submit" value="" class="btn btn-danger" asp-page="/Menu">Cancelar</button>
+                     <button type="submit" value="" class="btn btn-danger" asp-page="/Menu">Cancelar</button>
+
 
                 </form>
             </div>

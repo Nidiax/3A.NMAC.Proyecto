@@ -13,32 +13,35 @@
                 <form method="post" enctype="multipart/form-data">
 
                     <div class="col">
-                        <label for="Nombre del candidato">Nombre del Candidato</label>
+                        <label asp-for="Candidato.Nombre" for="nombre">Nombre del Candidato</label>
                         <input type="text" class="form-control" asp-for="Candidato.Nombre" />
                         <span class="text-danger" asp-validation-for="Candidato.Nombre"></span>
                     </div>
 
                     <div class="col">
-                        <input type="radio" asp-for="Candidato.Genero" value="true" />Hombre<br />
-                        <input type="radio" asp-for="Candidato.Genero" value="false" />Mujer<br />
-                    </div>
-
-                    <div class="col">
-                        <label for="Fecha de nacimiento">Fecha de Nacimiento</label>
-                        <input asp-for="Candidato.Fecha_Nam" type="date" class="form-control" />
+                        <label asp-for="Candidato.Fecha_Nam" for="fecha">Fecha de Nacimiento</label>
+                        <input type="date" class="form-control" asp-for="Candidato.Fecha_Nam" />
                         <span class="text-danger" asp-validation-for="Candidato.Fecha_Nam"></span>
                     </div>
 
                     <div class="col">
-                        <label for="age">Edad</label>
-                        <input asp-for="Candidato.Edad" class="form-control" />
-                        <span class="text-danger" asp-validation-for="Candidato.Edad"></span>
+                        <label asp-for="Candidato.Lugar_Nam" for="lugar">Lugar de Nacimiento</label>
+                        <input type="text" class="form-control" asp-for="Candidato.Lugar_Nam" />
+                        <span class="text-danger" asp-validation-for="Candidato.Lugar_Nam"></span>
                     </div>
 
                     <div class="col">
-                        <label for="estado civil">Estado Civil</label>
-                        <select asp-for="Candidato.Estado_civil" id="estado civil" class="custom-select">
-                            <option value="seleccione">Seleccione una opción</option>
+                        <label asp-for="Candidato.Id">Nacionalidad:</label>
+                        <select class="custom-select" asp-for="Candidato.NacionalidadId" asp-items="@(new SelectList(Model.ListNacionalidad,"Id","TipoNa"))">
+                            <option>Selecciona la nacionalidad</option>
+                        </select>
+                    </div>
+
+
+                    <div class="col">
+                        <label for="estado civil">Estado Civil</label><br />
+                        <select asp-for="Candidato.Estado_civil" class="custom-select" id="estado civil">
+                            <option value="Selecciona una opcion">Selecciona una opción</option>
                             <option value="soltero">Soltero</option>
                             <option value="casado">Casado</option>
                             <option value="divorciado">Divorciado</option>
@@ -47,68 +50,39 @@
                     </div>
 
                     <div class="col">
-                        <label for="curp">CURP</label>
+                        <label asp-for="Candidato.Curp" for="curp">CURP</label>
                         <input type="text" class="form-control" asp-for="Candidato.Curp" />
                         <span class="text-danger" asp-validation-for="Candidato.Curp"></span>
                     </div>
 
                     <div class="col">
-                        <label for="lugar">Lugar de Nacimiento</label>
-                        <input type="text" class="form-control" asp-for="Candidato.Lugar_Nam" />
-                        <span class="text-danger" asp-validation-for="Candidato.Lugar_Nam"></span>
-                    </div>
-
-                    <div class="col">
-                        <label for="imss">NSS</label>
-                        <input type="text" class="form-control" asp-for="Candidato.NSS" />
+                        <label asp-for="Candidato.NSS" for="nss">NSS</label>
+                        <input type="number" class="form-control" asp-for="Candidato.NSS" />
                         <span class="text-danger" asp-validation-for="Candidato.NSS"></span>
                     </div>
 
                     <div class="col">
-                        <label for="rfc">RFC</label>
-                        <input type="text" class="form-control" asp-for="Candidato.RFC" />
+                        <label asp-for="Candidato.Referencias" for="rfc">RFC</label>
+                        <input type="number" class="form-control" asp-for="Candidato.RFC" />
                         <span class="text-danger" asp-validation-for="Candidato.RFC"></span>
-                    </div>
+                    </div><br />
 
                     <div class="col">
-                        <label for="nacionalidad">Nacionalidad:</label>
-                        <input type="text" class="form-control" asp-for="Nacionalidad.TipoNa" />
-                        <span class="text-danger" asp-validation-for="Nacionalidad.TipoNa"></span>
-                    </div>
+                        <label asp-for="Candidato.OrdenId">Tipo de Vacante:</label>
+                        <select class="custom-select" asp-for="Candidato.OrdenId" asp-items="@(new SelectList(Model.ListOrden,"Id","TipoVacante"))">
+                            <option>Selecciona el vacante del candidato</option>
+                        </select>
+                    </div><br />
 
-
-                    <div>
-                        <button type="submit" value="registrar" class="btn btn-primary">Registrar</button> |
-                        <button type="submit" value="" class="btn btn-danger" asp-page="/Menu">Cancelar</button>
-                    </div>
-                    <!--
-                         <div class="form-row">
-                            <label asp-for="Candidato.Id">Nacionalidad a la que pertenece:</label><br />
-                        <select class="custom-select" asp-for="Nacionalidad.CandidatoId" asp-items="@(new SelectList(Model.ListNaci,"Id","Nombre"))">
-                         <option>Selecciona la nacionalidad</option>
-                         </select>
-
-                        </div>
-
-                            <div class="form-row">
-                        <label asp-for="Candidato.Id">Orden a la que pertenece:</label>
-                            <select class="custom-select" asp-for="Candidato.OrdenId" asp-items="@(new SelectList(Model.ListOrden,"Id","Nombre"))">
-                                 <option>Selecciona la orden</option>
-                                </select>
-                     </div>-->
-
-
-
-
-
-
-
+                    <button type="submit" value="Registrar" class="btn btn-primary">Registrar</button>|
+                    <button type="submit" value="" class="btn btn-secondary" asp-page="/Referencias/Create">Siguiente</button> |
+                    <button type="submit" value="" class="btn btn-danger" asp-page="/Menu">Cancelar</button>
 
                 </form>
+
             </div>
-            <div class="col-md-3"></div>
+
         </div>
     </div>
-
 </body>
 

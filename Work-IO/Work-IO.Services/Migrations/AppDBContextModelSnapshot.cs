@@ -78,14 +78,10 @@ namespace Work_IO.Services.Migrations
                     b.Property<string>("Lugar_Nam")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("NSS")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("NacionalidadId")
+                    b.Property<int>("NSS")
                         .HasColumnType("int");
 
-                    b.Property<int?>("NacionalidadId1")
+                    b.Property<int>("NacionalidadId")
                         .HasColumnType("int");
 
                     b.Property<string>("Nombre")
@@ -94,8 +90,10 @@ namespace Work_IO.Services.Migrations
                     b.Property<int>("OrdenId")
                         .HasColumnType("int");
 
-                    b.Property<string>("RFC")
-                        .IsRequired()
+                    b.Property<int>("RFC")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TipoVacante")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("UpdatedAT")
@@ -103,7 +101,7 @@ namespace Work_IO.Services.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("NacionalidadId1");
+                    b.HasIndex("NacionalidadId");
 
                     b.HasIndex("OrdenId");
 
@@ -193,9 +191,6 @@ namespace Work_IO.Services.Migrations
                     b.Property<int>("Numero")
                         .HasColumnType("int");
 
-                    b.Property<int>("OrdenId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime?>("UpdatedAT")
                         .HasColumnType("datetime2");
 
@@ -210,9 +205,6 @@ namespace Work_IO.Services.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("CandidatoId")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAT")
                         .HasColumnType("datetime2");
@@ -238,7 +230,7 @@ namespace Work_IO.Services.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("AsesorId")
+                    b.Property<int>("AsesorId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAT")
@@ -334,7 +326,9 @@ namespace Work_IO.Services.Migrations
                 {
                     b.HasOne("Work_IO.Models.Nacionalidad", "Nacionalidad")
                         .WithMany()
-                        .HasForeignKey("NacionalidadId1");
+                        .HasForeignKey("NacionalidadId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Work_IO.Models.Orden", "Orden")
                         .WithMany("Candidatos")
@@ -354,9 +348,11 @@ namespace Work_IO.Services.Migrations
 
             modelBuilder.Entity("Work_IO.Models.Orden", b =>
                 {
-                    b.HasOne("Work_IO.Models.Asesor", null)
+                    b.HasOne("Work_IO.Models.Asesor", "Asesor")
                         .WithMany("Ordenes")
-                        .HasForeignKey("AsesorId");
+                        .HasForeignKey("AsesorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Work_IO.Models.Empresa", "Empresa")
                         .WithMany("Ordenes")

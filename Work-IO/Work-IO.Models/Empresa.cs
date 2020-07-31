@@ -28,7 +28,7 @@ namespace Work_IO.Models
 
         //Asociaciones
         public ICollection<Orden> Ordenes { get; set; }
-        public int OrdenId { get; set; }
+        
 
         
     }

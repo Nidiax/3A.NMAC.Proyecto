@@ -14,9 +14,5 @@ namespace Work_IO.Models
         [Display(Name ="Tipo de Nacionalidad")]
         public string TipoNa { get; set; }
 
-        //Asociaciones
-        //Asociacion con candidato
-        public int CandidatoId { get; set; }
-
     }
 }

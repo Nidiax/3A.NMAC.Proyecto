@@ -11,39 +11,32 @@
             <div class="col-md-3"></div>
             <div class="col-md-6">
                 <form method="post" enctype="multipart/form-data">
-                    <div class="form-group">
+                    <div class="col">
                         <label for="Nombre de la Empresa">Nombre de la Empresa</label>
                         <input type="text" class="form-control" asp-for="Empresa.Nombre" />
                         <span class="text-danger" asp-validation-for="Empresa.Nombre"></span>
                     </div>
 
-                    <div class="form-group">
+                    <div class="col">
                         <label for="Dirección">Dirección</label>
                         <input asp-for="Empresa.Direccion" class="form-control" type="text" /><br />
                         <span class="text-danger" asp-validation-for="Empresa.Direccion"></span>
                     </div>
 
-                    <div class="form-group">
+                    <div class="col">
                         <label for="Número telefónico">Número telefónico</label>
                         <input asp-for="Empresa.Numero" type="tel" class="form-control" />
                         <span class="text-danger" asp-validation-for="Empresa.Numero"></span>
                     </div>
 
-                    <div class="form-group">
+                    <div class="col">
                         <label for="Correo electrónico">Correo Electrónico</label>
                         <input asp-for="Empresa.Correo" class="form-control" type="email" /><br />
                         <span class="text-danger" asp-validation-for="Empresa.Correo"></span>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="Orden">Orden Id</label>
-                        <input asp-for="Empresa.OrdenId" class="form-control" type="number" /><br />
-                        <span class="text-danger" asp-validation-for="Empresa.OrdenId"></span>
-                    </div>
-
+                    </div><br />
 
                     <button type="submit" value="Registrar" class="btn btn-primary">Registrar</button> |
-                    <button type="submit" value="" class="btn btn-danger" asp-page="/Empresas/Menu">Cancelar</button>
+                    <button type="submit" value="" class="btn btn-danger" asp-page="/Menu">Cancelar</button>
 
                 </form>                                                                                                                                   
             </div>

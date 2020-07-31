@@ -54,8 +54,7 @@ namespace Work_IO.Services.Migrations
                     Nombre = table.Column<string>(nullable: false),
                     Correo = table.Column<string>(nullable: true),
                     Direccion = table.Column<string>(nullable: false),
-                    Numero = table.Column<int>(nullable: false),
-                    OrdenId = table.Column<int>(nullable: false)
+                    Numero = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -71,8 +70,7 @@ namespace Work_IO.Services.Migrations
                     CreatedAT = table.Column<DateTime>(nullable: false),
                     UpdatedAT = table.Column<DateTime>(nullable: true),
                     Estatus = table.Column<bool>(nullable: false),
-                    TipoNa = table.Column<string>(nullable: true),
-                    CandidatoId = table.Column<int>(nullable: false)
+                    TipoNa = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -90,7 +88,7 @@ namespace Work_IO.Services.Migrations
                     Estatus = table.Column<bool>(nullable: false),
                     TipoVacante = table.Column<string>(nullable: true),
                     EmpresaId = table.Column<int>(nullable: false),
-                    AsesorId = table.Column<int>(nullable: true)
+                    AsesorId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -100,7 +98,7 @@ namespace Work_IO.Services.Migrations
                         column: x => x.AsesorId,
                         principalTable: "Asesores",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Ordenes_Empresas_EmpresaId",
                         column: x => x.EmpresaId,
@@ -124,21 +122,21 @@ namespace Work_IO.Services.Migrations
                     Lugar_Nam = table.Column<string>(nullable: true),
                     Estado_civil = table.Column<string>(nullable: true),
                     Curp = table.Column<string>(nullable: false),
-                    NSS = table.Column<string>(nullable: false),
-                    RFC = table.Column<string>(nullable: false),
+                    NSS = table.Column<int>(nullable: false),
+                    RFC = table.Column<int>(nullable: false),
                     OrdenId = table.Column<int>(nullable: false),
-                    NacionalidadId = table.Column<int>(nullable: false),
-                    NacionalidadId1 = table.Column<int>(nullable: true)
+                    TipoVacante = table.Column<string>(nullable: true),
+                    NacionalidadId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Candidatos", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Candidatos_Nacionalidad_NacionalidadId1",
-                        column: x => x.NacionalidadId1,
+                        name: "FK_Candidatos_Nacionalidad_NacionalidadId",
+                        column: x => x.NacionalidadId,
                         principalTable: "Nacionalidad",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Candidatos_Ordenes_OrdenId",
                         column: x => x.OrdenId,
@@ -205,9 +203,9 @@ namespace Work_IO.Services.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Candidatos_NacionalidadId1",
+                name: "IX_Candidatos_NacionalidadId",
                 table: "Candidatos",
-                column: "NacionalidadId1");
+                column: "NacionalidadId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Candidatos_OrdenId",
