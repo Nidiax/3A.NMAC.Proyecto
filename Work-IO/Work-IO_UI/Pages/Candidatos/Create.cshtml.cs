@@ -33,6 +33,8 @@ namespace Work_IO_UI.Pages.Candidatos
             
         }
 
+        public string[] Genders = new[] { "Hombre", "Mujer" };
+
         public IActionResult OnPost()
         {
             if (!ModelState.IsValid)

@@ -4,5 +4,69 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1 class="text-center">Candidatos Registrados</h1>
+@if (Model.Candidatos.Any())
+{<table class="table">
+        <!--Head-->
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    Candidato Id:
+                </th>
+                <th>
+                    Nombre:
+                </th>
+                <th>
+                    Género:
+                </th>
+                <th>
+                    Fecha de Nacimiento:
+                </th>
+                <th>
+                    Lugar de Nacimiento:
+                </th>
+                <th>
+                    Nacionalidad:
+                </th>
+                <th>
+                    Estado Civl:
+                </th>
+                <th>
+                    CURP:
+                </th>
+                <th>
+                    NSS:
+                </th>
+                <th>
+                    RFC:
+                </th>
+                <th>
+                    Tipo de Vacante solicitado:
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Candidatos)
+            {
+                <tr>
+                    <th scope="row">@Html.DisplayFor(m => item.Id)</th>
+                    <td>@Html.DisplayFor(m => item.Nombre)</td>
+                    <td>@Html.DisplayFor(m => item.Genero)</td>
+                    <td>@Html.DisplayFor(m => item.Fecha_Nam)</td>
+                    <td>@Html.DisplayFor(m => item.Lugar_Nam)</td>
+                    <td>@Html.DisplayFor(m => item.NacionalidadId)</td>
+                    <td>@Html.DisplayFor(m => item.Estado_civil)</td>
+                    <td>@Html.DisplayFor(m => item.Curp)</td>
+                    <td>@Html.DisplayFor(m => item.NSS)</td>
+                    <td>@Html.DisplayFor(m => item.RFC)</td>
+                    <td>@Html.DisplayFor(m => item.OrdenId)</td>
+                    <td>
+                        <a class="btn btn-warning" asp-page="/Empresas/Edit" asp-route-id="@item.Id" type="button">Detalles</a> |
+                        <a asp-page="/Menu" class="btn btn-light m-2">Regresar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
 

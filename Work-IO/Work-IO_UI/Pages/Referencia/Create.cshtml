@@ -6,95 +6,124 @@
 
 <h1 class="text-center">Registrar Referencias</h1>
 <body>
-    <div class="container-fluid">
-        <div class="row">
+    <div class="form-group">
+        <form method="post" enctype="multipart/form-data">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5">
+                        <div>
+                            <label asp-for="Referencias.CandidatoId">Candidato al que pertenece:</label>
+                            <select class="custom-select" asp-for="Referencias.CandidatoId" asp-items="@(new SelectList(Model.ListCandi,"Id","Nombre"))">
+                                <option>Selecciona al candidato</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label asp-for="Referencias.Nombre" for="Nombre">Nombre Comercial</label>
+                            <input type="text" class="form-control" asp-for="Referencias.Nombre" />
+                            <span class="text-danger" asp-validation-for="Referencias.Nombre"></span>
+                        </div>
+
+                        <div>
+                            <label asp-for="Referencias.Telefono" for="telefono">Teléfono</label>
+                            <input type="tel" class="form-control" asp-for="Referencias.Telefono" />
+                            <span class="text-danger" asp-validation-for="Referencias.Telefono"></span>
+                        </div>
+
+                        <div>
+                            <label asp-for="Referencias.Direccion" for="direccion">Dirección</label>
+                            <input asp-for="Referencias.Direccion" type="text" class="form-control" />
+                            <span class="text-danger" asp-validation-for="Referencias.Direccion"></span>
+                        </div>
+
+                        <div>
+                            <label asp-for="Referencias.Nombre_informante" for="informante">Nombre del Informante</label>
+                            <input asp-for="Referencias.Nombre_informante" class="form-control" />
+                            <span class="text-danger" asp-validation-for="Referencias.Nombre_informante"></span>
+                        </div>
+
+                        <div>
+                            <label asp-for="Referencias.Puesto_informante" for="informante">Puesto del Informante</label>
+                            <input type="text" class="form-control" asp-for="Referencias.Puesto_informante" />
+                            <span class="text-danger" asp-validation-for="Referencias.Puesto_informante"></span>
+                        </div>
+
+                        <div>
+                            <label asp-for="Referencias.Puesto_candidato" for="candidato">Puesto del Candidato</label>
+                            <input type="text" class="form-control" asp-for="Referencias.Puesto_candidato" />
+                            <span class="text-danger" asp-validation-for="Referencias.Puesto_candidato"></span>
+                        </div>
+
+                        <div>
+                            <label asp-for="Referencias.Sueldo" for="candidato">Sueldo Final</label>
+                            <input type="text" class="form-control" asp-for="Referencias.Sueldo" />
+                            <span class="text-danger" asp-validation-for="Referencias.Sueldo"></span>
+                        </div>
+
+                    </div>
+                    <div class="col-md-5">
+                        <div>
+                            <label asp-for="Referencias.Inicio_laboral" for="candidato">Inicio Laboral</label>
+                            <input type="date" class="form-control" asp-for="Referencias.Inicio_laboral" />
+                            <span class="text-danger" asp-validation-for="Referencias.Inicio_laboral"></span>
+                        </div>
+
+                        <div>
+                            <label asp-for="Referencias.Fecha_separacion" for="candidato">Fecha de Sepación</label>
+                            <input type="date" class="form-control" asp-for="Referencias.Fecha_separacion" />
+                            <span class="text-danger" asp-validation-for="Referencias.Fecha_separacion"></span>
+                        </div>
+
+                        <div>
+                            <label asp-for="Referencias.Puestos_anteriores" for="puestos">Puestos Anteriores del Candidato</label>
+                            <input type="text" class="form-control" asp-for="Referencias.Puestos_anteriores" />
+                            <span class="text-danger" asp-validation-for="Referencias.Puestos_anteriores"></span>
+                        </div>
+
+                        <div>
+                            <label asp-for="Referencias.Motivos" for="puestos">Motivos de separación</label>
+                            <input type="text" class="form-control" asp-for="Referencias.Motivos" />
+                            <span class="text-danger" asp-validation-for="Referencias.Motivos"></span>
+                        </div>
+
+                        <div>
+                            <label asp-for="Referencias.Tipo_contrato" for="contrato">Tipo de Contrato</label>
+                            <input type="text" class="form-control" asp-for="Referencias.Tipo_contrato" />
+                            <span class="text-danger" asp-validation-for="Referencias.Tipo_contrato"></span>
+                        </div>
+
+                        <div>
+                            <label asp-for="Referencias.Fun_ultimopuesto" for="ultimopuesto">Función en el Último Puesto</label>
+                            <input type="text" class="form-control" asp-for="Referencias.Fun_ultimopuesto" />
+                            <span class="text-danger" asp-validation-for="Referencias.Fun_ultimopuesto"></span>
+                        </div>
+
+                        <div>
+                            <label asp-for="Referencias.Desempenio" for="desempeño">Desempeño</label>
+                            <input type="text" class="form-control" asp-for="Referencias.Desempenio" />
+                            <span class="text-danger" asp-validation-for="Referencias.Desempenio"></span>
+                        </div>
+
+                        <div>
+                            <label asp-for="Referencias.Observaciones" for="observaciones">Observaciones</label>
+                            <input type="text" class="form-control" asp-for="Referencias.Observaciones" />
+                            <span class="text-danger" asp-validation-for="Referencias.Observaciones"></span>
+                        </div><br />
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>
+
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <form method="post" enctype="multipart/form-data">
-
-                    <div class="col">
-                        <label asp-for="Referencias.Id">Candidato al que pertenece:</label>
-                        <select class="custom-select" asp-for="Referencias.CandidatoId" asp-items="@(new SelectList(Model.ListCandi,"Id","Nombre"))">
-                        </select>
-                    </div>
-
-                    <div class="col">
-                        <label asp-for="Referencias.Nombre" for="Nombre">Nombre Comercial</label>
-                        <input type="text" class="form-control" asp-for="Referencias.Nombre" />
-                        <span class="text-danger" asp-validation-for="Referencias.Nombre"></span>
-                    </div>
-
-                    <div class="col">
-                        <label asp-for="Referencias.Telefono" for="telefono">Teléfono</label>
-                        <input type="tel" class="form-control" asp-for="Referencias.Telefono" />
-                        <span class="text-danger" asp-validation-for="Referencias.Telefono"></span>
-                    </div>
-
-                    <div class="col">
-                        <label asp-for="Referencias.Direccion" for="direccion">Dirección</label>
-                        <input asp-for="Referencias.Direccion" type="text" class="form-control" />
-                        <span class="text-danger" asp-validation-for="Referencias.Direccion"></span>
-                    </div>
-
-                    <div class="col">
-                        <label asp-for="Referencias.Nombre_informante" for="informante">Nombre del Informante</label>
-                        <input asp-for="Referencias.Nombre_informante" class="form-control" />
-                        <span class="text-danger" asp-validation-for="Referencias.Nombre_informante"></span>
-                    </div>
-
-                    <div class="col">
-                        <label asp-for="Referencias.Puesto_informante" for="informante">Puesto del Informante</label>
-                        <input type="text" class="form-control" asp-for="Referencias.Puesto_informante" />
-                        <span class="text-danger" asp-validation-for="Referencias.Puesto_informante"></span>
-                    </div>
-
-                    <div class="col">
-                        <label asp-for="Referencias.Puesto_candidato" for="candidato">Puesto del Candidato</label>
-                        <input type="text" class="form-control" asp-for="Referencias.Puesto_candidato" />
-                        <span class="text-danger" asp-validation-for="Referencias.Puesto_candidato"></span>
-                    </div>
-
-                    <div class="col">
-                        <label asp-for="Referencias.Puestos_anteriores" for="puestos">Puestos Anteriores</label>
-                        <input type="text" class="form-control" asp-for="Referencias.Puestos_anteriores" />
-                        <span class="text-danger" asp-validation-for="Referencias.Puestos_anteriores"></span>
-                    </div>
-
-                    <div class="col">
-                        <label asp-for="Referencias.Tipo_contrato" for="contrato">Tipo de Contrato</label>
-                        <input type="text" class="form-control" asp-for="Referencias.Tipo_contrato" />
-                        <span class="text-danger" asp-validation-for="Referencias.Tipo_contrato"></span>
-                    </div>
-
-                    <div class="col">
-                        <label asp-for="Referencias.Fun_ultimopuesto" for="ultimopuesto">Función del Último Puesto</label>
-                        <input type="text" class="form-control" asp-for="Referencias.Fun_ultimopuesto" />
-                        <span class="text-danger" asp-validation-for="Referencias.Fun_ultimopuesto"></span>
-                    </div>
-
-                    <div class="col">
-                        <label asp-for="Referencias.Desempenio" for="desempeño">Desempeño</label>
-                        <input type="text" class="form-control" asp-for="Referencias.Desempenio" />
-                        <span class="text-danger" asp-validation-for="Referencias.Desempenio"></span>
-                    </div>
-
-                    <div class="col">
-                        <label asp-for="Referencias.Observaciones" for="observaciones">Observaciones</label>
-                        <input type="text" class="form-control" asp-for="Referencias.Observaciones" />
-                        <span class="text-danger" asp-validation-for="Referencias.Observaciones"></span>
-                    </div>
-
-
-
-                    <button type="submit" value="registrar" class="btn btn-primary">Registrar</button> |
-                    <button type="submit" value="" class="btn btn-danger" asp-page="/Menu">Cancelar</button>
-
-
-
-
-                </form>
+                <button type="submit" value="registrar" class="btn btn-primary">Registrar</button> |
+                <button type="submit" value="" class="btn btn-danger" asp-page="/Menu">Cancelar</button>
             </div>
             <div class="col-md-3"></div>
-        </div>
+
+
+        </form>
     </div>
 </body>

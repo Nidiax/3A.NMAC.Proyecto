@@ -1,0 +1,99 @@
+﻿@page
+@model Work_IO_UI.Pages.Referencia.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Referencias Registradas</h1>
+@if (Model.Referencias.Any())
+{<table class="table">
+        <!--Head-->
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    Id Referencias:
+                </th>
+                <th>
+                    Nombre del Candidato:
+                </th>
+                <th>
+                    Dirección
+                </th>
+                <th>
+                    Número Telefónico
+                </th>
+                <th>
+                    Nombre del Informante:
+                </th>
+                <th>
+                    Puesto del Informante:
+                </th>
+                <th>
+                    Puesto del Candidato:
+                </th>
+                <th>
+                    Sueldo:
+                </th>
+                <th>
+                    Inicio laboral:
+                </th>
+                <th>
+                    Fecha de separación:
+                </th>
+                <th>
+                    Puestos anteriores:
+                </th>
+                <th>
+                    Motivos de seperación:
+                </th>
+                <th>
+                    Tipo de contrato:
+                </th>
+                <th>
+                    Función del último puesto:
+                </th>
+                <th>
+                    Desempeño:
+                </th>
+                <th>
+                    Observaciones:
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Referencias)
+            {
+                <tr>
+                    <th scope="row">@Html.DisplayFor(m => item.Id)</th>
+                    <td>@Html.DisplayFor(m => item.Nombre)</td>
+                    <td>@Html.DisplayFor(m => item.Direccion)</td>
+                    <td>@Html.DisplayFor(m => item.Telefono)</td>
+                    <td>@Html.DisplayFor(m => item.Nombre_informante)</td>
+                    <td>@Html.DisplayFor(m => item.Puesto_informante)</td>
+                    <td>@Html.DisplayFor(m => item.Puesto_candidato)</td>
+                    <td>@Html.DisplayFor(m => item.Sueldo)</td>
+                    <td>@Html.DisplayFor(m => item.Inicio_laboral)</td>
+                    <td>@Html.DisplayFor(m => item.Fecha_separacion)</td>
+                    <td>@Html.DisplayFor(m => item.Puestos_anteriores)</td>
+                    <td>@Html.DisplayFor(m => item.Motivos)</td>
+                    <td>@Html.DisplayFor(m => item.Tipo_contrato)</td>
+                    <td>@Html.DisplayFor(m => item.Fun_ultimopuesto)</td>
+                    <td>@Html.DisplayFor(m => item.Desempenio)</td>
+                    <td>@Html.DisplayFor(m => item.Observaciones)</td>
+                    <td>
+                        <a class="btn btn-warning" asp-page="/Empresas/Edit" asp-route-id="@item.Id" type="button">Detalles</a> |
+                        <a asp-page="/Menu" class="btn btn-light m-2">Regresar</a>
+                    </td>
+
+
+
+                </tr>
+            }
+        </tbody>
+
+
+
+    </table>
+}
+

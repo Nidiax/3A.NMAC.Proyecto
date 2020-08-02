@@ -26,9 +26,6 @@ namespace Work_IO.Services.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Apellidos")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Correo")
                         .HasColumnType("nvarchar(max)");
 
@@ -279,7 +276,17 @@ namespace Work_IO.Services.Migrations
                     b.Property<bool>("Estatus")
                         .HasColumnType("bit");
 
+                    b.Property<DateTime>("Fecha_separacion")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Fun_ultimopuesto")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Inicio_laboral")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Motivos")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nombre")

@@ -12,8 +12,9 @@ namespace Work_IO.Models
        // public int CuentaId { get; set; }
        [Display(Name ="Usuario")]
        public string Usuario { get; set; }
+        public string Correo { get; set; }
         [Display(Name ="Contraseña")]
-       public string Contraseña { get; set; }
+       public string Contrasenia { get; set; }
 
     }
 }

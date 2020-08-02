@@ -12,6 +12,7 @@ namespace Work_IO_UI.Pages.Referencia
 {
     public class CreateModel : PageModel
     {
+        [BindProperty]
         public Referencias Referencias { get; set; }
         public Candidato Candidato { get; set; }
         public IWebHostEnvironment HostEnvironment { get; set; }
@@ -33,7 +34,7 @@ namespace Work_IO_UI.Pages.Referencia
                 return Page();
 
             var id = repositoryW.Insert(Referencias);
-            return RedirectToPage("/Menu");
+            return RedirectToPage("/Index");
         }
         public void OnGet()
         {

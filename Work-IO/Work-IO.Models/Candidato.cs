@@ -38,7 +38,7 @@ namespace Work_IO.Models
         //Asociaciones para orden
         public int OrdenId { get; set; }
         public Orden Orden { get; set; }
-        public string TipoVacante { get; set; }
+      //  public string TipoVacante { get; set; }
 
         //Asociaones para nacionalidad
         public int NacionalidadId { get; set; }

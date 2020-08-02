@@ -4,20 +4,27 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Empresas Registradas</h1>
+<h1 class="text-center">Empresas Registradas</h1>
 @if (Model.Empresas.Any())
-{<table class="table">
+{  <table class="table">
         <!--Head-->
         <thead class="thead-dark">
             <tr>
-                <th scope="col">@Html.DisplayNameFor(x => x.Empresas.FirstOrDefault().Id)</th>
-                <th scope="col">@Html.DisplayNameFor(x => x.Empresas.FirstOrDefault().Nombre)</th>
-                <th scope="col">@Html.DisplayNameFor(x => x.Empresas.FirstOrDefault().Direccion)</th>
-                <th scope="col">@Html.DisplayNameFor(x => x.Empresas.FirstOrDefault().Numero)</th>
-                <th scope="col">@Html.DisplayNameFor(x => x.Empresas.FirstOrDefault().Correo)</th>
-
-
-                <th scope="col"></th>
+                <th>
+                    Empresa Id:
+                </th>
+                <th>
+                    Nombre:
+                </th>
+                <th>
+                    Dirección:
+                </th>
+                <th>
+                    Número telefónico:
+                </th>
+                <th>
+                    Correo electrónico:
+                </th>
             </tr>
         </thead>
         <tbody>
@@ -29,17 +36,18 @@
                     <td>@Html.DisplayFor(m => item.Direccion)</td>
                     <td>@Html.DisplayFor(m => item.Numero)</td>
                     <td>@Html.DisplayFor(m => item.Correo)</td>
-                    <td><a class="btn btn-success" asp-page="/Empresas/Details" type="button">Detalles</a></td>
-                    <td><a class="btn btn-warning" asp-page="/Empresas/Edit" type="button">Editar</a></td>
-                    <td><a class="btn btn-danger" asp-page="/Empresas/Delete" type="button">Eliminar</a></td>
+                    <td>
+                        <a class="btn btn-warning" asp-page="/Empresas/Edit" asp-route-id="@item.Id" type="button">Detalles</a> |
+                        <a asp-page="/Menu" class="btn btn-light m-2">Regresar</a>
+                    </td>
+
+
+
                 </tr>
             }
         </tbody>
-
-
-
-    </table>
-}
+</table>
+ }
 
 
 

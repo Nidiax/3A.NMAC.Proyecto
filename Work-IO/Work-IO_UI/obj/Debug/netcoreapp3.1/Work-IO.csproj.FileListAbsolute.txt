@@ -439,3 +439,7 @@ C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razo
 C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Ordenes\Index.cshtml.g.cs
 C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Referencia\Create.cshtml.g.cs
 C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Candidatos\Create.cshtml.g.cs
+C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Referencia\Details.cshtml.g.cs
+C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Referencia\Delete.cshtml.g.cs
+C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Referencia\Edit.cshtml.g.cs
+C:\git-proyecto\3A.NMAC.Proyecto\Work-IO\Work-IO_UI\obj\Debug\netcoreapp3.1\Razor\Pages\Referencia\Index.cshtml.g.cs

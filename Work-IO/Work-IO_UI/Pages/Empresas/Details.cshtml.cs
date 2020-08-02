@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Work_IO.Services;
 using Work_IO.Models;
+using Microsoft.AspNetCore.Hosting;
 
 namespace Work_IO_UI.Pages.Empresas
 {
@@ -13,14 +14,17 @@ namespace Work_IO_UI.Pages.Empresas
     {
         private readonly IRepositoryW<Empresa> repositoryW;
         public IEnumerable<Empresa> Empresas { get; set; }
-        public Empresa Empresa { get; private set; }
-        public DetailsModel(IRepositoryW<Empresa> repositoryW)
+       // public IWebHostEnvironment HostEnvironment { get; }
+        [BindProperty]
+        public Empresa Empresa { get; set; }
+        public DetailsModel(IRepositoryW<Empresa> repository)
         {
-            this.repositoryW = repositoryW;
+            this.repositoryW = repository;
         }
-        public void OnGet(int id)
+        public IActionResult Get(int id)
         {
-            Empresas = repositoryW.GetAll();
+            Empresa = repositoryW.Get(id);
+            return Page();
         }
     }
 }

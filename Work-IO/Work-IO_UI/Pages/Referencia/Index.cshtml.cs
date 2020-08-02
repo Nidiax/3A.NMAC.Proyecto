@@ -2,28 +2,29 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Work_IO.Models;
 using Work_IO.Services;
+using Work_IO.Models;
+using Microsoft.AspNetCore.Hosting;
 
-namespace Work_IO_UI.Pages.Candidatos
+namespace Work_IO_UI.Pages.Referencia
 {
     public class IndexModel : PageModel
     {
-        private readonly IRepositoryW<Candidato> repositoryW;
-        public IEnumerable<Candidato> Candidatos { get; set; }
-        public Candidato Candidato { get; private set; }
+        private readonly IRepositoryW<Referencias> repositoryW;
+        public IEnumerable<Referencias> Referencias { get; set; }
+        public Referencias Referencia { get; private set; }
         public IWebHostEnvironment HostEnvironment { get; set; }
-        public IndexModel(IRepositoryW<Candidato> repositoryW, IWebHostEnvironment hostEnvironment)
+        public IndexModel (IRepositoryW<Referencias> repositoryW, IWebHostEnvironment hostEnvironment)
         {
             this.repositoryW = repositoryW;
             HostEnvironment = hostEnvironment;
         }
+
         public void OnGet()
         {
-            Candidatos = repositoryW.GetAll();
+            Referencias = repositoryW.GetAll();
         }
     }
 }

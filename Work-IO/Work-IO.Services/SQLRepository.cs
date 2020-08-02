@@ -31,7 +31,7 @@ namespace Work_IO.Services
             obj.UpdatedAT = DateTime.Now;
             obj.Estatus = false;
             var entity = Entities.Attach(obj);
-            entity.State = EntityState.Modified;
+            entity.State = EntityState.Deleted;
             context.SaveChanges();
         }
 

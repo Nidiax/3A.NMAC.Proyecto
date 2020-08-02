@@ -19,6 +19,13 @@
                     </div>
 
                     <div class="col">
+                        <label for="genero">Género</label>
+                        <input type="radio" asp-for="Candidato.Genero" value="true" />Hombre<br />
+                        <input type="radio" asp-for="Candidato.Genero" value="false" />Mujer<br />
+                    </div>
+
+
+                    <div class="col">
                         <label asp-for="Candidato.Fecha_Nam" for="fecha">Fecha de Nacimiento</label>
                         <input type="date" class="form-control" asp-for="Candidato.Fecha_Nam" />
                         <span class="text-danger" asp-validation-for="Candidato.Fecha_Nam"></span>

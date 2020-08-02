@@ -13,8 +13,6 @@ namespace Work_IO.Models
       //  public int AsesorId { get; set; }
         [Display(Name ="Nombre")]
         public string Nombre { get; set; }
-        [Display(Name ="Apellidos")]
-        public string Apellidos { get; set; }
         [Display(Name ="Correo Electronico")]
         [EmailAddress(ErrorMessage = "Este campo {0} debe ser un correo electrónico válido")]
         public string Correo { get; set; }

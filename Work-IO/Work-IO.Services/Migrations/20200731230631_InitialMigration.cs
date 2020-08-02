@@ -17,7 +17,6 @@ namespace Work_IO.Services.Migrations
                     UpdatedAT = table.Column<DateTime>(nullable: true),
                     Estatus = table.Column<bool>(nullable: false),
                     Nombre = table.Column<string>(nullable: true),
-                    Apellidos = table.Column<string>(nullable: true),
                     Correo = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -184,7 +183,10 @@ namespace Work_IO.Services.Migrations
                     Puesto_informante = table.Column<string>(nullable: false),
                     Puesto_candidato = table.Column<string>(nullable: true),
                     Sueldo = table.Column<int>(nullable: false),
+                    Inicio_laboral = table.Column<DateTime>(nullable: false),
+                    Fecha_separacion = table.Column<DateTime>(nullable: false),
                     Puestos_anteriores = table.Column<string>(nullable: true),
+                    Motivos = table.Column<string>(nullable: false),
                     Tipo_contrato = table.Column<string>(nullable: true),
                     Fun_ultimopuesto = table.Column<string>(nullable: true),
                     Desempenio = table.Column<string>(nullable: true),

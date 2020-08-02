@@ -6,37 +6,43 @@
 
 <h1>Ordenes Registradas</h1>
 @if (Model.Ordenes.Any())
-{<table class="table table-info table-striped">
+{<table class="table">
         <!--Head-->
         <thead class="thead-dark">
             <tr>
-                <th scope="col">@Html.DisplayNameFor(x => x.Ordenes.FirstOrDefault().Id)</th>
-                <th scope="col">@Html.DisplayNameFor(x => x.Ordenes.FirstOrDefault().TipoVacante)</th>
-                <th scope="col">@Html.DisplayNameFor(x => x.Ordenes.FirstOrDefault().EmpresaId)</th>
-                
-
-
-                <th scope="col"></th>
+                <th>
+                    Orden Id:
+                </th>
+                <th>
+                    Fecha de creación:
+                </th>
+               <th>
+                   Empresa al que pertenece:
+               </th>
+                <th>
+                    Asesor al que pertenece:
+                </th>
+                <th>
+                    Tipo de Vacante:
+                </th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model.Ordenes)
-             {
-                <tr>
-                    <th scope="row">@Html.DisplayFor(m => item.Id)</th>
-                    <td>@Html.DisplayFor(m => item.TipoVacante)</td>
-                    <td>@Html.DisplayFor(m => item.EmpresaId)</td>
-                  
-
-
-                </tr>
+            {
+                   <tr>
+                     <th scope="row">@Html.DisplayFor(m => item.Id)</th>
+                     <th>@Html.DisplayFor(m => item.CreatedAT)</th>
+                     <td>@Html.DisplayFor(m => item.EmpresaId)</td>
+                     <td>@Html.DisplayFor(m => item.AsesorId)</td>
+                     <td>@Html.DisplayFor(m => item.TipoVacante)</td>
+                     <td>
+                         <a class="btn btn-warning" asp-page="/Empresas/Edit" asp-route-id="@item.Id" type="button">Detalles</a> |
+                         <a asp-page="/Menu" class="btn btn-light m-2">Regresar</a>
+                     </td>
+                   </tr>
              }
         </tbody>
     </table>
  }
 
-<div class="row">
-    <a class="btn btn-success" asp-page="/Ordenes/Details" type="button">Detalles</a>
-    <a class="btn btn-warning" asp-page="/Ordenes/Edit" type="button">Editar</a>
-    <a class="btn btn-danger" asp-page="/Ordenes/Delete" type="button">Eliminar</a>
-</div>
