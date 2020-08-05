@@ -20,7 +20,7 @@
 
                      <div class="col">
                         <label asp-for="Orden.Id">Asesor asignado:</label>
-                        <select class="custom-select" asp-for="Orden.AsesorId" asp-items="@(new SelectList(Model.ListAsesor, "Id","Nombre","Apellidos"))">
+                        <select class="custom-select" asp-for="Orden.AsesorId" asp-items="@(new SelectList(Model.ListAsesor, "Id","Nombre"))">
                           <option>Selecciona el asesor</option>
                         </select>
                     </div>

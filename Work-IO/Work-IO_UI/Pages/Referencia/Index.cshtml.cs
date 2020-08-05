@@ -13,18 +13,24 @@ namespace Work_IO_UI.Pages.Referencia
     public class IndexModel : PageModel
     {
         private readonly IRepositoryW<Referencias> repositoryW;
+        private readonly IRepositoryW<Candidato> repositoryWC;
         public IEnumerable<Referencias> Referencias { get; set; }
-        public Referencias Referencia { get; private set; }
+        public IEnumerable<Candidato> Candidatos2 { get; set; }
+        public Referencias Referencia { get; set; }
+        public Candidato Candidato { get; set; }
         public IWebHostEnvironment HostEnvironment { get; set; }
-        public IndexModel (IRepositoryW<Referencias> repositoryW, IWebHostEnvironment hostEnvironment)
+        public IndexModel (IRepositoryW<Referencias> repositoryW, IRepositoryW<Candidato> repositoryWC, IWebHostEnvironment hostEnvironment)
         {
             this.repositoryW = repositoryW;
             HostEnvironment = hostEnvironment;
+            this.repositoryWC = repositoryWC;
         }
 
-        public void OnGet()
+        public IActionResult OnGet(int id)
         {
             Referencias = repositoryW.GetAll();
+            Candidatos2 = repositoryWC.GetAll();
+            return Page();
         }
     }
 }

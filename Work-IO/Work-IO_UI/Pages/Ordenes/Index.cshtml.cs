@@ -13,17 +13,28 @@ namespace Work_IO_UI.Pages.Ordenes
     public class IndexModel : PageModel
     {
         private readonly IRepositoryW<Orden> repositoryW;
+        private readonly IRepositoryW<Empresa> repositoryWE;
+        private readonly IRepositoryW<Asesor> repositoryWA;
         public IEnumerable<Orden> Ordenes { get; set; }
-        public Empresa Empresa { get; private set; }
+        public IEnumerable<Empresa> Empresas { get; set; }
+        public IEnumerable<Asesor> Asesores { get; set; }
+        public Empresa Empresa { get; set; }
+        public Asesor Asesor { get; set; }
+        public Orden Orden { get; set; }
         public IWebHostEnvironment HostEnvironment { get; }
-        public IndexModel(IRepositoryW<Orden> repositoryW, IWebHostEnvironment hostEnvironment)
+        public IndexModel(IRepositoryW<Orden> repositoryW, IRepositoryW<Asesor> repositoryWA, IRepositoryW<Empresa> repositoryWE, IWebHostEnvironment hostEnvironment)
         {
             this.repositoryW = repositoryW;
             HostEnvironment = hostEnvironment;
+            this.repositoryWE = repositoryWE;
+            this.repositoryWA = repositoryWA;
         }
-        public void OnGet()
+        public IActionResult OnGet(int id)
         {
             Ordenes = repositoryW.GetAll();
+            Asesores = repositoryWA.GetAll();
+            Empresas = repositoryWE.GetAll();
+            return Page();
         }
     }
 }

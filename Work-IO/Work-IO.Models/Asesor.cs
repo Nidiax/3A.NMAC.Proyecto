@@ -18,5 +18,8 @@ namespace Work_IO.Models
         public string Correo { get; set; }
 
         public ICollection<Orden> Ordenes { get; set; }
+
+        public int CuentaId { get; set; }
+        public Cuenta Cuenta { get; set; }
     }
 }

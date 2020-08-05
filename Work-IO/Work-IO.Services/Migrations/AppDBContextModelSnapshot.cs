@@ -32,6 +32,9 @@ namespace Work_IO.Services.Migrations
                     b.Property<DateTime>("CreatedAT")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("CuentaId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("Estatus")
                         .HasColumnType("bit");
 
@@ -42,6 +45,8 @@ namespace Work_IO.Services.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CuentaId");
 
                     b.ToTable("Asesores");
                 });
@@ -90,9 +95,6 @@ namespace Work_IO.Services.Migrations
                     b.Property<int>("RFC")
                         .HasColumnType("int");
 
-                    b.Property<string>("TipoVacante")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime?>("UpdatedAT")
                         .HasColumnType("datetime2");
 
@@ -112,7 +114,10 @@ namespace Work_IO.Services.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Contraseña")
+                    b.Property<string>("Contrasenia")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Correo")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedAT")
@@ -327,6 +332,15 @@ namespace Work_IO.Services.Migrations
                     b.HasIndex("CandidatoId");
 
                     b.ToTable("Referencias");
+                });
+
+            modelBuilder.Entity("Work_IO.Models.Asesor", b =>
+                {
+                    b.HasOne("Work_IO.Models.Cuenta", "Cuenta")
+                        .WithMany()
+                        .HasForeignKey("CuentaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Work_IO.Models.Candidato", b =>

@@ -34,7 +34,7 @@ namespace Work_IO_UI.Pages.Referencia
                 return Page();
 
             var id = repositoryW.Insert(Referencias);
-            return RedirectToPage("/Index");
+            return RedirectToPage("/Menu");
         }
         public void OnGet()
         {

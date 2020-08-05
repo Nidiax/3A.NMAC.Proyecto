@@ -35,6 +35,7 @@ namespace Work_IO_UI
             // services.AddSingleton<IRepositoryW,MockContainerRepository>();
             services.AddScoped<AppDBContext>();
             services.AddScoped(typeof(IRepositoryW<>), typeof(SQLRepository<>));
+            services.AddScoped<IProyecto, ContainerRepository>();
             //  services.AddScoped<IContainerRepository, ContainerRepository>();
 
             services.AddRouting(option =>

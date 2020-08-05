@@ -8,9 +8,10 @@ using Work_IO.Models;
 
 namespace Work_IO.Services
 {
-    /*
+    
     public class ContainerRepository : IProyecto
     {
+        
         AppDBContext context;
         public ContainerRepository(AppDBContext context)
         {
@@ -22,7 +23,7 @@ namespace Work_IO.Services
             throw new NotImplementedException();
         }
 
-        public Empresa GetOrdbyEmpresa(int id)
+        public Asesor GetOrdbyAsesor(int id)
         {
             throw new NotImplementedException();
         }
@@ -34,24 +35,23 @@ namespace Work_IO.Services
 
         public int InicioSesion(Cuenta cuenta)
         {
-            var empresas = context.Empresas.Include(x => x.Cuenta).ToList();
+            var asesor = context.Asesores.Include(x => x.Cuenta).ToList();
             int numero = 0;
 
-            foreach(var item in empresas)
+            foreach(var item in asesor)
             {
                 if(cuenta.Contrasenia == item.Cuenta.Contrasenia && cuenta.Correo == item.Cuenta.Correo)
                 {
                     numero = item.Id;
                 }
-
-               
             }
 
             return numero;
         }
-
+        
+        
     }
-    */
+    
     
 
 

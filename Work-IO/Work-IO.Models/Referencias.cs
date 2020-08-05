@@ -29,10 +29,13 @@ namespace Work_IO.Models
         public string Puesto_candidato { get; set; }
         [Display(Name ="Sueldo")]
         public int Sueldo { get; set; }
-        [Display(Name ="Fecha de Inicio Laboral")]
+        // [Display(Name ="Fecha de Inicio Laboral")]
+        [DisplayFormat(DataFormatString = "{0:d}")]
         [Required(ErrorMessage ="Este campo {0} es obligatorio")]
         public DateTime Inicio_laboral { get; set; }
-        [Display(Name ="Fecha de Separación")]
+        // [Display(Name ="Fecha de Separación")]
+        [DisplayFormat(DataFormatString = "{0:d}")]
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
         public DateTime Fecha_separacion { get; set; }
         [Display(Name ="Puestos Anteriores")]
         public string Puestos_anteriores { get; set; }

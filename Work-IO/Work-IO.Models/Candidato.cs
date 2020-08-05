@@ -17,7 +17,8 @@ namespace Work_IO.Models
         [Display(Name = "Genero")] //, Prompt ="Seleccione una opcion"//
         public bool Genero { get; set; }
         //Fecha de Nacimiento
-        [Display(Name = "Fecha de Nacimiento")]
+      //  [Display(Name = "Fecha de Nacimiento")]
+        [DisplayFormat(DataFormatString = "{0:d}")]
         public DateTime Fecha_Nam { get; set; }
         //Lugar de Nacimiento
         [Display(Name = "Lugar de Nacimiento")]

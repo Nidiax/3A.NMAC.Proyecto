@@ -8,23 +8,6 @@ namespace Work_IO.Services.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Asesores",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    CreatedAT = table.Column<DateTime>(nullable: false),
-                    UpdatedAT = table.Column<DateTime>(nullable: true),
-                    Estatus = table.Column<bool>(nullable: false),
-                    Nombre = table.Column<string>(nullable: true),
-                    Correo = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Asesores", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Cuentas",
                 columns: table => new
                 {
@@ -34,7 +17,8 @@ namespace Work_IO.Services.Migrations
                     UpdatedAT = table.Column<DateTime>(nullable: true),
                     Estatus = table.Column<bool>(nullable: false),
                     Usuario = table.Column<string>(nullable: true),
-                    Contraseña = table.Column<string>(nullable: true)
+                    Correo = table.Column<string>(nullable: true),
+                    Contrasenia = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -74,6 +58,30 @@ namespace Work_IO.Services.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Nacionalidad", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Asesores",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CreatedAT = table.Column<DateTime>(nullable: false),
+                    UpdatedAT = table.Column<DateTime>(nullable: true),
+                    Estatus = table.Column<bool>(nullable: false),
+                    Nombre = table.Column<string>(nullable: true),
+                    Correo = table.Column<string>(nullable: true),
+                    CuentaId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Asesores", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Asesores_Cuentas_CuentaId",
+                        column: x => x.CuentaId,
+                        principalTable: "Cuentas",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -124,7 +132,6 @@ namespace Work_IO.Services.Migrations
                     NSS = table.Column<int>(nullable: false),
                     RFC = table.Column<int>(nullable: false),
                     OrdenId = table.Column<int>(nullable: false),
-                    TipoVacante = table.Column<string>(nullable: true),
                     NacionalidadId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -205,6 +212,11 @@ namespace Work_IO.Services.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_Asesores_CuentaId",
+                table: "Asesores",
+                column: "CuentaId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Candidatos_NacionalidadId",
                 table: "Candidatos",
                 column: "NacionalidadId");
@@ -238,9 +250,6 @@ namespace Work_IO.Services.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Cuentas");
-
-            migrationBuilder.DropTable(
                 name: "Documentos");
 
             migrationBuilder.DropTable(
@@ -260,6 +269,9 @@ namespace Work_IO.Services.Migrations
 
             migrationBuilder.DropTable(
                 name: "Empresas");
+
+            migrationBuilder.DropTable(
+                name: "Cuentas");
         }
     }
 }

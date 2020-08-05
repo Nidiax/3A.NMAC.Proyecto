@@ -28,14 +28,12 @@ namespace Work_IO.Models
 
         //Asociaciones
         public ICollection<Orden> Ordenes { get; set; }
-        /*
-        public int CuentaId { get; set; }
-        public Cuenta Cuenta { get; set; }
 
+        /*
         public static implicit operator int(Empresa v)
         {
             throw new NotImplementedException();
         }
-        */
+          */  
     }
 }

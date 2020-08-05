@@ -5,11 +5,13 @@ using Work_IO.Models;
 
 namespace Work_IO.Services
 {
-    interface IProyecto
+    
+    public interface IProyecto
     {
-        public Empresa GetOrdbyEmpresa(int id);
+        public Asesor GetOrdbyAsesor(int id);
         public Orden GetOrden(int id);
         public IEnumerable<Candidato> GetCandidatosbyOrden(int id);
         public int InicioSesion(Cuenta cuenta);
     }
+    
 }

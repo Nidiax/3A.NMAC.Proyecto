@@ -19,7 +19,7 @@
                     </div>
 
                     <div class="col">
-                        <label for="genero">Género</label>
+                        <label for="genero">Género</label><br />
                         <input type="radio" asp-for="Candidato.Genero" value="true" />Hombre<br />
                         <input type="radio" asp-for="Candidato.Genero" value="false" />Mujer<br />
                     </div>
@@ -69,7 +69,7 @@
                     </div>
 
                     <div class="col">
-                        <label asp-for="Candidato.Referencias" for="rfc">RFC</label>
+                        <label asp-for="Candidato.RFC" for="rfc">RFC</label>
                         <input type="number" class="form-control" asp-for="Candidato.RFC" />
                         <span class="text-danger" asp-validation-for="Candidato.RFC"></span>
                     </div><br />
@@ -82,7 +82,6 @@
                     </div><br />
 
                     <button type="submit" value="Registrar" class="btn btn-primary">Registrar</button>|
-                    <button type="submit" value="" class="btn btn-secondary" asp-page="/Referencias/Create">Siguiente</button> |
                     <button type="submit" value="" class="btn btn-danger" asp-page="/Menu">Cancelar</button>
 
                 </form>

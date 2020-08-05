@@ -4,37 +4,36 @@
     ViewData["Title"] = "Login";
 }
 
-
 <div class="login-box">
 
-    <form>
+    <form method="post">
         <div>
             <h1 class="text-center">Iniciar Sesión</h1>
         </div>
-      
+
         <div>
             <!--Usuario-->
-            <label for="Usuario">Usuario</label>
-           <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>-->
-            <input type="email" placeholder="Correo Electrónico o Usuario" />
+            <label asp-for="@Model.Cuenta.Correo" for="Usuario">Usuario</label>
+            <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>-->
+            <input asp-for="@Model.Cuenta.Correo" type="email" placeholder="Correo Electrónico o Usuario" />
         </div>
-       
+
         <div>
             <!--Contraseña-->
-            <label for="contraseña">Contraseña</label>
-            <input type="password" placeholder="Contraseña" />
+            <label asp-for="@Model.Cuenta.Contrasenia" for="contraseña">Contraseña</label>
+            <input asp-for="@Model.Cuenta.Contrasenia" type="password" placeholder="Contraseña" />
         </div>
-       
 
-       <!-- <div class="checkbox">
-            <label for="remember me">Recuérdame</label>
-            <input id="remember me" type="checkbox">
-        </div> -->
+
+        <!-- <div class="checkbox">
+             <label for="remember me">Recuérdame</label>
+             <input id="remember me" type="checkbox">
+         </div> -->
 
         <div>
             <input type="submit" value="Iniciar Sesión" />
         </div>
-        
+
 
 
     </form>
@@ -42,76 +41,77 @@
 
 <style>
 
-    body {      /*cuerpo*/
-        margin:0;           /*margenes*/
-        padding:0;          /*es el espacio que hay entre label y input*/
-        font-family: initial;  /*tipo de letra para toda la página*/
-        background-color:cadetblue;  /* color de fondo de la pagina*/
+    body { /*cuerpo*/
+        margin: 0; /*margenes*/
+        padding: 0; /*es el espacio que hay entre label y input*/
+        font-family: initial; /*tipo de letra para toda la página*/
+        background-color: cadetblue; /* color de fondo de la pagina*/
     }
 
-    .login-box label {  /*forma de label*/
+    .login-box label { /*forma de label*/
         margin: 0;
-        padding:0 0 20px; /*tenga un espacio hacía abajo*/
-        font-weight: bold;  /*para que las letras estén remancadas*/
-       /* display: block;*/  /*para que esté en una sola línea*/
+        padding: 0 0 20px; /*tenga un espacio hacía abajo*/
+        font-weight: bold; /*para que las letras estén remancadas*/
+        /* display: block;*/ /*para que esté en una sola línea*/
     }
 
-    .login-box input {  /* los input para cada label*/
+    .login-box input { /* los input para cada label*/
         width: 100%; /*acabarcan*/
         margin-bottom: 20px; /*margen del boton*/
     }
 
-    .login-box input[type="email"], .login-box input[type="password"] {  /**/
-        border: none; /*quitar borde*/
-        border-bottom: 1px solid; /*línea que queda hacía abajo*/
-        background: transparent; /*el fondo transparente*/
-        outline: none; /**/
-        height: 40px;    /*alto*/
-        font-size: 16px; /*tamañan de la letra*/
-    } 
+        .login-box input[type="email"], .login-box input[type="password"] { /**/
+            border: none; /*quitar borde*/
+            border-bottom: 1px solid; /*línea que queda hacía abajo*/
+            background: transparent; /*el fondo transparente*/
+            outline: none; /**/
+            height: 40px; /*alto*/
+            font-size: 16px; /*tamañan de la letra*/
+        }
 
-    .login-box input[type="submit"] { /*el botón*/
-        cursor: pointer; /*sirve para indicar que función hará el botón*/
-        background: gray; /*color de fondo*/
-        color: black; /*color de la letra*/
-        outline:none;  /**/
-        border:none; /*no tendrá ningún borde*/
-        font-size:18px; /*tamaño de letra*/
-    }
+        .login-box input[type="submit"] { /*el botón*/
+            cursor: pointer; /*sirve para indicar que función hará el botón*/
+            background: gray; /*color de fondo*/
+            color: black; /*color de la letra*/
+            outline: none; /**/
+            border: none; /*no tendrá ningún borde*/
+            font-size: 18px; /*tamaño de letra*/
+        }
 
-    .login-box a {   /*enlaces*/
-        text-decoration: none;  /*quitar la decoración por defecto*/
+    .login-box a { /*enlaces*/
+        text-decoration: none; /*quitar la decoración por defecto*/
         font-size: 12px; /*tamaño de las letra*/
         line-height: 20px; /*línea divisiora*/
-        color:black; /*color de las letras*/
+        color: black; /*color de las letras*/
     }
 
-    .login-box a:hover {  /*tenga un efecto de color */
-        color: black; /*color de letra*/
-    }
+        .login-box a:hover { /*tenga un efecto de color */
+            color: black; /*color de letra*/
+        }
 
-    .login-box {   /*formulario*/
-        width: 520px;  /*creación de una cuadro también ancho del cuadro*/
-        height:500px;  /*tamaño del cuadro de largo*/
+    .login-box { /*formulario*/
+        width: 520px; /*creación de una cuadro también ancho del cuadro*/
+        height: 500px; /*tamaño del cuadro de largo*/
         background: white; /*fondo del cuadro*/
-        color: black;  /*color de las letras del cuadro*/
+        color: black; /*color de las letras del cuadro*/
         top: 50%; /*centrado*/
         left: 50%; /*centrado*/
-        position: absolute;  /* posición*/
+        position: absolute; /* posición*/
         transform: translate(-50%, -50%); /*posición centrada*/
         box-sizing: border-box; /**/
-        padding: 40px/*hacía arriba*/ 40px;/*hacía los lados*/   /*espacio interno*/
+        padding: 40px /*hacía arriba*/ 40px; /*hacía los lados*/ /*espacio interno*/
     }
 
     .checkbox input[type="checkbox"] {
-        top:-20%;
-
+        top: -20%;
     }
 
-    .checkbox label[remember me] {
-        top:-20px;
+    .checkbox label[rememberme] {
+        top: -20px;
     }
 </style>
+
+
 
 
 

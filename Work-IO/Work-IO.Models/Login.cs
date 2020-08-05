@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Text;
 using System.Configuration;
+using System.Data.SqlClient;
+using System.Linq;
 
-namespace Work_IO.Models
+
+
+namespace RhController.Models
 {
-    public static class Login
-    {
-		/*
+	public static class Login
+	{
 		public static bool Autenticar(string usuario, string contraseña)
 		{
 			//consulta de BD
@@ -31,8 +32,5 @@ namespace Work_IO.Models
 					return true;
 			}
 		}
-		*/
 	}
-	
 }
-

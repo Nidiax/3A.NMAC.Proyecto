@@ -4,5 +4,90 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1 class="text-center">Detalles del candidato</h1>
+<form class="mt-3" method="post" enctype="multipart/form-data">
+    <div class="d-flex justify-content-end p-2">
+        <button type="submit" name="adios" value="Editar" class="btn btn-primary m-2">Actualizar</button>
+        <input type="button" value="Eliminar" class="btn btn-danger m-2" data-toggle="modal" data-target="#exampleModal" />
+        <!--<button type="submit" class="btn btn-danger m-2" data-toggle="modal" data-target="#exampleModal">Eliminar</button>-->
+        <a asp-page="/Candidatos/Index" class="btn btn-light m-2">Regresar</a>
+    </div>
+    <input hidden asp-for="Candidato.Id" />
+
+    <div class="form-group">
+        <label asp-for="Candidato.Nombre">Nombre</label>
+        <input class="form-control form-text" role="textbox" asp-for="Candidato.Nombre" />
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label for="genero">Género</label><br />
+            <input type="radio" asp-for="Candidato.Genero" value="true" />Hombre<br />
+            <input type="radio" asp-for="Candidato.Genero" value="false" />Mujer<br />
+        </div>
+        <div class="form-group col-md-4">
+            <label asp-for="Candidato.Lugar_Nam">Lugar de Nacimiento</label>
+            <input type="text" class="form-group" asp-for="Candidato.Lugar_Nam" />
+        </div>
+        <div class="form-group col-md-4">
+            <label asp-for="Candidato.Fecha_Nam">Fecha de Nacimiento</label>
+            <input type="date" class="form-control" asp-for="Candidato.Fecha_Nam" />
+        </div>
+        <div class="form-group col-md-4">
+            <label asp-for="Candidato.NacionalidadId">Nacionalidad</label>
+            <select class="custom-select" asp-for="Candidato.NacionalidadId" asp-items="@(new SelectList(Model.ListNacionalidad,"Id","TipoNa"))">
+                <option>Selecciona la nacionalidad</option>
+            </select>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="estadocivil">Estado Civil</label>
+            <select class="custom-select" asp-for="Candidato.Estado_civil" id="estadocivil">
+                <option value="selecciona una opción">Selecciona una opción</option>
+                <option value="soltero">Soltero</option>
+                <option value="casado">Casado</option>
+                <option value="divorciado">Divorciado</option>
+                <option value="vuido">Viudo</option>
+            </select>
+        </div>
+        <div class="form-group col-md-4">
+            <label asp-for="Candidato.Curp">CURP</label>
+            <input type="text" class="form-control" asp-for="Candidato.Curp" />
+        </div>
+        <div class="form-group col-md-4">
+            <label asp-for="Candidato.NSS">NSS</label>
+            <input type="text" class="form-control" asp-for="Candidato.NSS" />
+        </div>
+        <div class="form-group col-md-4">
+            <label asp-for="Candidato.RFC">RFC</label>
+            <input type="text" class="form-control" asp-for="Candidato.RFC" />
+        </div>
+        <div class="form-group col-md-4">
+            <label asp-for="Candidato.OrdenId">Tipo de Vacante:</label>
+            <select class="custom-select" asp-for="Candidato.OrdenId" asp-items="@(new SelectList(Model.ListOrden,"Id","TipoVacante"))">
+                <option>Selecciona una opción</option>
+            </select>
+        </div>
+
+
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">¡¡ADVERTENCIA!!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ¿Está seguro que desea eliminar esta candidato?
+                </div>
+                <div class="modal-footer">
+                    <button name="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" name="adios" value="Eliminar" class="btn btn-primary">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
 
