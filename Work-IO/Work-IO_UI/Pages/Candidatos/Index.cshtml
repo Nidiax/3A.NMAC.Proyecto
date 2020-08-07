@@ -23,6 +23,9 @@
                     Candidato Id:
                 </th>
                 <th>
+                    Fotografía:
+                </th>
+                <th>
                     Nombre:
                 </th>
                 <th>
@@ -60,8 +63,10 @@
         <tbody>
             @foreach (var item in Model.Candidatos)
             {
+                var imgPath = $"~/imagenes/{(string.IsNullOrEmpty(item.Foto) ? "image.jpg" : item.Foto)}";
                 <tr>
                     <th scope="row">@Html.DisplayFor(m => item.Id)</th>
+                    <th><img src="@Url.Content(imgPath)" alt="@item.Foto" class="img-thumbnail" asp-append-version="true" /></th>
                     <td>@Html.DisplayFor(m => item.Nombre)</td>
                     <td>@Html.DisplayFor(m => item.Genero)</td>
                     <td>@Html.DisplayFor(m => item.Fecha_Nam)</td>

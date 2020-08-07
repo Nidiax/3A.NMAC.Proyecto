@@ -14,6 +14,12 @@
     </div>
     <input hidden asp-for="Candidato.Id" />
 
+    <div class=" custom-file">
+        <input type="file" asp-for="Foto" class="custom-file-input form-control" lang="es">
+        <label class="custom-file-label" for="Foto">Elige tu Foto</label>
+        <input hidden asp-for="Candidato.Foto" />
+    </div>
+
     <div class="form-group">
         <label asp-for="Candidato.Nombre">Nombre</label>
         <input class="form-control form-text" role="textbox" asp-for="Candidato.Nombre" />

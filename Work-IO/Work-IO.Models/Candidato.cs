@@ -9,15 +9,15 @@ namespace Work_IO.Models
     //Hereda la clase BaseEntity
     public class Candidato : BaseEntity
     {
-       // [Display(Name = "Id")]  //muestra el nombre la propiedad//
-       // [Key]
-       // public int CandidatoId { get; set; }
+        // [Display(Name = "Id")]  //muestra el nombre la propiedad//
+        // [Key]
+        // public int CandidatoId { get; set; }
         [Display(Name = "Nombre")] //prompt es una marca de agua, parecido al placeholder//
         public string Nombre { get; set; }
         [Display(Name = "Genero")] //, Prompt ="Seleccione una opcion"//
         public bool Genero { get; set; }
         //Fecha de Nacimiento
-      //  [Display(Name = "Fecha de Nacimiento")]
+        //  [Display(Name = "Fecha de Nacimiento")]
         [DisplayFormat(DataFormatString = "{0:d}")]
         public DateTime Fecha_Nam { get; set; }
         //Lugar de Nacimiento
@@ -34,6 +34,8 @@ namespace Work_IO.Models
         [Display(Name = "RFC")]
         [Required(ErrorMessage = "Este campo {0} es obligatorio")]
         public int RFC { get; set; }
+        [Display(Name ="Foto")]
+        public string Foto { get; set; }
 
         //Asociaciones 
         //Asociaciones para orden
